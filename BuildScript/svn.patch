@@ -1,0 +1,212 @@
+Index: build/generator/templates/build_locale.ezt
+===================================================================
+--- build/generator/templates/build_locale.ezt	(revision 1209012)
++++ build/generator/templates/build_locale.ezt	(working copy)
+@@ -18,7 +18,7 @@
+ 
+ @echo off
+ @rem **************************************************************************
+-cd ..\..\subversion\po
++cd ..\..\..\subversion\po
+ mkdir ..\..\%1\mo
+ set exitcode=0
+ [for pofiles]echo Running msgfmt on [pofiles.po]...
+Index: build/win32/make_dist.py
+===================================================================
+--- build/win32/make_dist.py	(revision 1209012)
++++ build/win32/make_dist.py	(working copy)
+@@ -205,18 +205,20 @@
+                      File('%(blddir)s/svnlook/svnlook.pdb'),
+                      File('%(blddir)s/svndumpfilter/svndumpfilter.exe'),
+                      File('%(blddir)s/svndumpfilter/svndumpfilter.pdb'),
++                     File('%(blddir)s/svnrdump/svnrdump.exe'),
++                     File('%(blddir)s/svnrdump/svnrdump.pdb'),
+                      File('%(blddir)s/svnserve/svnserve.exe'),
+                      File('%(blddir)s/svnserve/svnserve.pdb'),
+                      File('%(blddir)s/svnversion/svnversion.exe'),
+                      File('%(blddir)s/svnversion/svnversion.pdb'),
+-                     File('%(blddir)s/../contrib/client-side/svn-push/svn-push.exe'),
+-                     File('%(blddir)s/../contrib/client-side/svn-push/svn-push.pdb'),
+                      File('%(blddir)s/../tools/client-side/svnmucc/svnmucc.exe'),
+                      File('%(blddir)s/../tools/client-side/svnmucc/svnmucc.pdb'),
+                      File('%(blddir)s/../tools/server-side/svnauthz-validate.exe'),
+                      File('%(blddir)s/../tools/server-side/svnauthz-validate.pdb'),
+                      File('%(blddir)s/../tools/server-side/svn-populate-node-origins-index.exe'),
+                      File('%(blddir)s/../tools/server-side/svn-populate-node-origins-index.pdb'),
++                     File('%(blddir)s/../tools/server-side/svn-rep-sharing-stats.exe'),
++                     File('%(blddir)s/../tools/server-side/svn-rep-sharing-stats.pdb'),
+                      File('%(blddir)s/../tools/dev/svnraisetreeconflict/svnraisetreeconflict.exe'),
+                      File('%(blddir)s/../tools/dev/svnraisetreeconflict/svnraisetreeconflict.pdb'),
+                      File('%(blddir)s/mod_dav_svn/mod_dav_svn.so'),
+@@ -275,7 +277,7 @@
+                           OptFile('%(@zlib)s/zlibstat.lib'),
+                           ),
+ 
+-             'lib/serf': (File('%(@serf)s/Release/serf.lib'),
++             'lib/serf': (File('%(@serf)s/Release/serf-1.lib'),
+                           ),
+ 
+              'lib/sasl': (File('%(@sasl)s/lib/libsasl.lib'),
+@@ -297,7 +299,7 @@
+                               File('%(@apr)s/NOTICE'),
+                               ),
+              'licenses/openssl': File('%(@openssl)s/LICENSE'),
+-             'licenses/svn' : File('%(srcdir)s/COPYING'),
++             'licenses/svn' : File('%(srcdir)s/LICENSE'),
+              'licenses/cyrus-sasl' : File('%(@sasl)s/COPYING'),
+ 
+              'perl': None,
+@@ -313,6 +315,7 @@
+                                FileGlob('%(binddir)s/swig/python/libsvn_swig_py/*.pdb'),
+                                FileGlob('%(bindsrc)s/swig/python/*.py'),
+                                FileGlob('%(binddir)s/swig/python/*.dll'),
++                               FileGlob('%(binddir)s/swig/python/*.pyd'),
+                                FileGlob('%(binddir)s/swig/python/*.pdb'),
+                                ),
+              'python/svn': FileGlob('%(bindsrc)s/swig/python/svn/*.py'),
+@@ -400,8 +403,8 @@
+       continue
+     optdir = os.path.abspath(os.path.join(_srcdir, optcfg.get('options', opt)))
+     if not os.path.isdir(optdir):
+-      print('make_dist: %s = %s' % (opt, optdir))
+-      print('make_dist: Target is not a directory')
++      _stdout.write('make_dist: %s = %s\n' % (opt, optdir))
++      _stdout.write('make_dist: Target is not a directory\n')
+       _exit(1)
+     cfg.set('DEFAULT', '@' + opt[7:], optdir)
+ 
+Index: subversion/bindings/swig/include/apr.swg
+===================================================================
+--- subversion/bindings/swig/include/apr.swg	(revision 1209012)
++++ subversion/bindings/swig/include/apr.swg	(working copy)
+@@ -24,37 +24,37 @@
+  */
+ 
+ /* -----------------------------------------------------------------------
+-   Create perl5 typemaps for long long datatypes
+-   PERL-FIXME: These typemaps are decidedly odd.  They convert long long
++   Create perl5 typemaps for __int64 datatypes
++   PERL-FIXME: These typemaps are decidedly odd.  They convert __int64
+      values to strings before returning them.  This behaviour is either
+      wrong, or needful of a comment explaining it.
+ */
+ #ifdef SWIGPERL
+-%typemap(out) long long {
++%typemap(out) __int64 {
+     char temp[256];
+     sprintf(temp, "%" APR_INT64_T_FMT, (apr_int64_t) $1);
+     ST(argvi) = sv_newmortal();
+     sv_setpv((SV*)ST(argvi++), temp);
+ }
+ 
+-%typemap(out) unsigned long long {
++%typemap(out) __uint64{
+     char temp[256];
+     sprintf(temp, "%" APR_UINT64_T_FMT, (apr_uint64_t) $1);
+     ST(argvi) = sv_newmortal();
+     sv_setpv((SV*)ST(argvi++), temp);
+ }
+ 
+-%typemap(in, numinputs=0) long long *OUTPUT (apr_int64_t temp)
++%typemap(in, numinputs=0) __int64 *OUTPUT (apr_int64_t temp)
+     "$1 = &temp;";
+-%typemap(argout) long long *OUTPUT {
++%typemap(argout) __int64 *OUTPUT {
+   char temp[256];
+   sprintf(temp, "%" APR_INT64_T_FMT, (apr_int64_t)*($1));
+   %append_output(sv_2mortal(newSVpv(temp, 0)));
+ }
+ 
+-%typemap(in, numinputs=0) unsigned long long *OUTPUT (apr_uint64_t temp)
++%typemap(in, numinputs=0) __uint64 *OUTPUT (apr_uint64_t temp)
+     "$1 = &temp;";
+-%typemap(argout) unsigned long long *OUTPUT {
++%typemap(argout) __uint64 *OUTPUT {
+   char temp[256];
+   sprintf(temp, "%" APR_UINT64_T_FMT, (apr_uint64_t)*($1));
+   %append_output(sv_2mortal(newSVpv(temp, 0)));
+@@ -72,9 +72,15 @@
+ 
+ /* If sizeof(apr_off_t) > sizeof(apr_int64_t), apr_off_t will get truncated
+  * to a 64-bit integer */
++#ifdef SWIGPERL
++%apply __int64 { apr_off_t, apr_int64_t }
++%apply __int64 *OUTPUT { apr_int64_t * };
++%apply __uint64 { apr_uint64_t }
++#else
+ %apply long long { apr_off_t, apr_int64_t }
+ %apply long long *OUTPUT { apr_int64_t * };
+ %apply unsigned long long { apr_uint64_t }
++#endif
+ 
+ /* -----------------------------------------------------------------------
+    apr_time_t
+Index: subversion/bindings/swig/include/svn_types.swg
+===================================================================
+--- subversion/bindings/swig/include/svn_types.swg	(revision 1209012)
++++ subversion/bindings/swig/include/svn_types.swg	(working copy)
+@@ -250,7 +250,11 @@
+   enum svn_wc_merge_outcome_t *
+ };
+ %apply long *OUTPUT { svn_revnum_t *, svn_node_kind_t * };
++#ifdef SWIGPERL
++%apply __int64 *OUTPUT { svn_filesize_t * }
++#else
+ %apply long long *OUTPUT { svn_filesize_t * }
++#endif
+ 
+ /* -----------------------------------------------------------------------
+    Generic macros for callback typemaps
+Index: subversion/include/svn_types.h
+===================================================================
+--- subversion/include/svn_types.h	(revision 1209012)
++++ subversion/include/svn_types.h	(working copy)
+@@ -29,6 +29,7 @@
+ 
+ /* ### this should go away, but it causes too much breakage right now */
+ #include <stdlib.h>
++#include <limits.h>
+ 
+ #include <apr.h>         /* for apr_size_t, apr_int64_t, ... */
+ #include <apr_errno.h>   /* for apr_status_t */
+Index: subversion/libsvn_subr/cache-membuffer.c
+===================================================================
+--- subversion/libsvn_subr/cache-membuffer.c	(revision 1209012)
++++ subversion/libsvn_subr/cache-membuffer.c	(working copy)
+@@ -116,7 +116,7 @@
+ /* Don't create cache segments smaller than this value unless the total
+  * cache size itself is smaller.
+  */
+-#define MIN_SEGMENT_SIZE 0x2000000ull
++#define MIN_SEGMENT_SIZE 0x2000000ui64
+ 
+ /* We don't mark the initialization status for every group but initialize
+  * a number of groups at once. That will allow for a very small init flags
+Index: subversion/libsvn_subr/cache.c
+===================================================================
+--- subversion/libsvn_subr/cache.c	(revision 1209012)
++++ subversion/libsvn_subr/cache.c	(working copy)
+@@ -211,15 +211,15 @@
+ {
+   enum { _1MB = 1024 * 1024 };
+ 
+-  apr_uint64_t misses = info->gets - info->hits;
+-  double hit_rate = (100.0 * info->hits)
+-                  / (info->gets ? info->gets : 1);
+-  double write_rate = (100.0 * info->sets)
++  apr_int64_t misses = info->gets - info->hits;
++  double hit_rate = (100.0 * (apr_int64_t)info->hits)
++                  / (info->gets ? (apr_int64_t)info->gets : 1);
++  double write_rate = (100.0 * (apr_int64_t)info->sets)
+                     / (misses ? misses : 1);
+-  double data_usage_rate = (100.0 * info->used_size)
+-                         / (info->data_size ? info->data_size : 1);
+-  double data_entry_rate = (100.0 * info->used_entries)
+-                         / (info->total_entries ? info->total_entries : 1);
++  double data_usage_rate = (100.0 * (apr_int64_t)info->used_size)
++                         / (info->data_size ? (apr_int64_t)info->data_size : 1);
++  double data_entry_rate = (100.0 * (apr_int64_t)info->used_entries)
++                         / (info->total_entries ? (apr_int64_t)info->total_entries : 1);
+ 
+   return svn_string_createf(result_pool,
+ 
