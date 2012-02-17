@@ -10,16 +10,17 @@ These binaries were built with:
     APR-ICONV 1.2.1
     Neon 0.29.6
     Berkeley DB 4.8.30
-    OpenSSL 1.0.0e
-    ZLib 1.2.5
-    Apache 2.2.21
+    OpenSSL 1.0.0g
+    ZLib 1.2.6
+    Apache 2.2.22
     Python 2.5.4 , 2.6.6 and 2.7.2
     Perl 5.14.2 (ActivePerl)
     libintl 0.14.1 (patched)
+	Java 1.6.0_30
     Ruby 1.8.6
     Cyrus SASL 2.1.23
     serf 1.0.0
-    sqlite 3.7.9.0
+    sqlite 3.7.10.0
     SWIG 1.3.24   (newer versions doesn't work with VC++6)
 
 The BDB binaries are at
