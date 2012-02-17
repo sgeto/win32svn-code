@@ -1,6 +1,6 @@
 Index: build/generator/templates/build_locale.ezt
 ===================================================================
---- build/generator/templates/build_locale.ezt	(revision 1209012)
+--- build/generator/templates/build_locale.ezt	(revision 1243820)
 +++ build/generator/templates/build_locale.ezt	(working copy)
 @@ -18,7 +18,7 @@
  
@@ -13,9 +13,9 @@ Index: build/generator/templates/build_locale.ezt
  [for pofiles]echo Running msgfmt on [pofiles.po]...
 Index: build/win32/make_dist.py
 ===================================================================
---- build/win32/make_dist.py	(revision 1209012)
+--- build/win32/make_dist.py	(revision 1243820)
 +++ build/win32/make_dist.py	(working copy)
-@@ -205,18 +205,20 @@
+@@ -205,18 +205,22 @@
                       File('%(blddir)s/svnlook/svnlook.pdb'),
                       File('%(blddir)s/svndumpfilter/svndumpfilter.exe'),
                       File('%(blddir)s/svndumpfilter/svndumpfilter.pdb'),
@@ -29,6 +29,8 @@ Index: build/win32/make_dist.py
 -                     File('%(blddir)s/../contrib/client-side/svn-push/svn-push.pdb'),
                       File('%(blddir)s/../tools/client-side/svnmucc/svnmucc.exe'),
                       File('%(blddir)s/../tools/client-side/svnmucc/svnmucc.pdb'),
++                     File('%(blddir)s/../tools/server-side/mod_dontdothat/mod_dontdothat.so'),
++                     File('%(blddir)s/../tools/server-side/mod_dontdothat/mod_dontdothat.pdb'),
                       File('%(blddir)s/../tools/server-side/svnauthz-validate.exe'),
                       File('%(blddir)s/../tools/server-side/svnauthz-validate.pdb'),
                       File('%(blddir)s/../tools/server-side/svn-populate-node-origins-index.exe'),
@@ -38,7 +40,7 @@ Index: build/win32/make_dist.py
                       File('%(blddir)s/../tools/dev/svnraisetreeconflict/svnraisetreeconflict.exe'),
                       File('%(blddir)s/../tools/dev/svnraisetreeconflict/svnraisetreeconflict.pdb'),
                       File('%(blddir)s/mod_dav_svn/mod_dav_svn.so'),
-@@ -275,7 +277,7 @@
+@@ -275,7 +279,7 @@
                            OptFile('%(@zlib)s/zlibstat.lib'),
                            ),
  
@@ -47,7 +49,7 @@ Index: build/win32/make_dist.py
                            ),
  
               'lib/sasl': (File('%(@sasl)s/lib/libsasl.lib'),
-@@ -297,7 +299,7 @@
+@@ -297,7 +301,7 @@
                                File('%(@apr)s/NOTICE'),
                                ),
               'licenses/openssl': File('%(@openssl)s/LICENSE'),
@@ -56,7 +58,7 @@ Index: build/win32/make_dist.py
               'licenses/cyrus-sasl' : File('%(@sasl)s/COPYING'),
  
               'perl': None,
-@@ -313,6 +315,7 @@
+@@ -313,6 +317,7 @@
                                 FileGlob('%(binddir)s/swig/python/libsvn_swig_py/*.pdb'),
                                 FileGlob('%(bindsrc)s/swig/python/*.py'),
                                 FileGlob('%(binddir)s/swig/python/*.dll'),
@@ -64,7 +66,7 @@ Index: build/win32/make_dist.py
                                 FileGlob('%(binddir)s/swig/python/*.pdb'),
                                 ),
               'python/svn': FileGlob('%(bindsrc)s/swig/python/svn/*.py'),
-@@ -400,8 +403,8 @@
+@@ -400,8 +405,8 @@
        continue
      optdir = os.path.abspath(os.path.join(_srcdir, optcfg.get('options', opt)))
      if not os.path.isdir(optdir):
@@ -77,7 +79,7 @@ Index: build/win32/make_dist.py
  
 Index: subversion/bindings/swig/include/apr.swg
 ===================================================================
---- subversion/bindings/swig/include/apr.swg	(revision 1209012)
+--- subversion/bindings/swig/include/apr.swg	(revision 1243820)
 +++ subversion/bindings/swig/include/apr.swg	(working copy)
 @@ -24,37 +24,37 @@
   */
@@ -143,7 +145,7 @@ Index: subversion/bindings/swig/include/apr.swg
     apr_time_t
 Index: subversion/bindings/swig/include/svn_types.swg
 ===================================================================
---- subversion/bindings/swig/include/svn_types.swg	(revision 1209012)
+--- subversion/bindings/swig/include/svn_types.swg	(revision 1243820)
 +++ subversion/bindings/swig/include/svn_types.swg	(working copy)
 @@ -250,7 +250,11 @@
    enum svn_wc_merge_outcome_t *
@@ -159,7 +161,7 @@ Index: subversion/bindings/swig/include/svn_types.swg
     Generic macros for callback typemaps
 Index: subversion/include/svn_types.h
 ===================================================================
---- subversion/include/svn_types.h	(revision 1209012)
+--- subversion/include/svn_types.h	(revision 1243820)
 +++ subversion/include/svn_types.h	(working copy)
 @@ -29,6 +29,7 @@
  
@@ -171,7 +173,7 @@ Index: subversion/include/svn_types.h
  #include <apr_errno.h>   /* for apr_status_t */
 Index: subversion/libsvn_subr/cache-membuffer.c
 ===================================================================
---- subversion/libsvn_subr/cache-membuffer.c	(revision 1209012)
+--- subversion/libsvn_subr/cache-membuffer.c	(revision 1243820)
 +++ subversion/libsvn_subr/cache-membuffer.c	(working copy)
 @@ -116,7 +116,7 @@
  /* Don't create cache segments smaller than this value unless the total
@@ -184,7 +186,7 @@ Index: subversion/libsvn_subr/cache-membuffer.c
   * a number of groups at once. That will allow for a very small init flags
 Index: subversion/libsvn_subr/cache.c
 ===================================================================
---- subversion/libsvn_subr/cache.c	(revision 1209012)
+--- subversion/libsvn_subr/cache.c	(revision 1243820)
 +++ subversion/libsvn_subr/cache.c	(working copy)
 @@ -211,15 +211,15 @@
  {
