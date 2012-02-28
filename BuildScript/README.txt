@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.7.2. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.3. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.collab.net/repos/svn/branches/1.7.x/CHANGES
@@ -39,7 +39,7 @@ Please read the Subversion INSTALL file for more information:
 
 Package contents:
 
-    svn-win32-1.7.2/
+    svn-win32-1.7.3/
        README.txt           -- This file
        bin/                 -- All Subversion binaries and supporting DLLs,
           *.exe                including APR DLLs

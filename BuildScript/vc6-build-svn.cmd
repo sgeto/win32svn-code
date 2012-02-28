@@ -461,6 +461,9 @@ cd %ROOT%
 %AWKDIR%\awk.exe "{gsub(/bdbver = [0-9]*/,\"bdbver = %BDBVER%\"); };1" %DIR%\build\win32\make_dist.conf.template > %DIR%\build\win32\make_dist.conf.temp
 %AWKDIR%\awk.exe "{gsub(/zip.exe/,\"C:/zip/zip.exe\"); };1" %DIR%\build\win32\make_dist.conf.temp > %DIR%\build\win32\make_dist.conf
 
+rem copy ReadMe to right folder
+copy /Y C:\win32svn\BuildScript\README.txt %ROOT%\README.txt
+
 rem ====== Regenerate VC project files - make_dist doesn't like junit-dir
 cd %ROOT%\%DIR%
 python gen-make.py -t dsp --with-httpd=..\httpd-%HTTPDVER% --with-berkeley-db=%BDBDIR% --with-openssl=..\httpd-%HTTPDVER%\srclib\openssl --with-zlib=..\httpd-%HTTPDVER%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITDIR%
