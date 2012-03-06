@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.7.3. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.4. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.collab.net/repos/svn/branches/1.7.x/CHANGES
@@ -19,7 +19,7 @@ These binaries were built with:
 	Java 1.6.0_30
     Ruby 1.8.6
     Cyrus SASL 2.1.23
-    serf 1.0.0
+    serf 1.0.1
     sqlite 3.7.10.0
     SWIG 1.3.24   (newer versions doesn't work with VC++6)
 
@@ -39,7 +39,7 @@ Please read the Subversion INSTALL file for more information:
 
 Package contents:
 
-    svn-win32-1.7.3/
+    svn-win32-1.7.4/
        README.txt           -- This file
        bin/                 -- All Subversion binaries and supporting DLLs,
           *.exe                including APR DLLs
