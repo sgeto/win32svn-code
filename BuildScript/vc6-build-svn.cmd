@@ -23,7 +23,7 @@ set VSCommonDir=
 
 rem ====== Set these shell variables before doing a build.
 rem VER is used to name the output bin dir as svn-win32-%VER%
-set VER=1.7.3
+set VER=1.7.4
 set DIR=src-%VER%
 set DRIVE=C
 set ROOT=%DRIVE%:\SVN-%VER%
@@ -59,7 +59,7 @@ set APRICONVVER=1.2.1
 set NEONVER=0.29.6
 set NEONMAJORVER=0
 set NEONMINORVER=29
-set SERFVER=1.0.0
+set SERFVER=1.0.1
 set SVNBINPATH="C:\Program Files\Subversion\bin\"
 set ZLIBVER=1.2.6
 set ZLIBFILEVER=126
@@ -69,7 +69,9 @@ set WGET="C:\Program Files\GnuWin32\bin\wget.exe"
 rem ====== End of shell variables which need to be set.
 
 rem Set up path to include Python and BDB.
-PATH=%PATH%;%NASMDIR%;%BDBDIR%;%PYTHONDIR%;%AWKDIR%;%GETTEXTBIN%;%RUBYDIR%\bin;%JAVADIR%\bin
+PATH=%PATH%;%NASMDIR%;%BDBDIR%;%AWKDIR%;%GETTEXTBIN%;%RUBYDIR%\bin;%JAVADIR%\bin
+set PATHBASE=%PATH%
+PATH=%PATHBASE%;%PYTHONDIR%
 
 rem set Classpath for javahl tests
 SET CLASSPATH=%JUNITJAR%;%JUNITDIR%
@@ -87,6 +89,7 @@ rem Get Subversion Source code
 %SVNBINPATH%\svn co https://svn.apache.org/repos/asf/subversion/tags/%VER% %ROOT%\%DIR%
 rem ===========PATCH SUBVERSION =========
 rem use patch file
+%SVNBINPATH%\svn patch C:\win32svn\BuildScript\svn.patch %ROOT%\%DIR%
 
 rem Get Apache httpd Source code
 %SVNBINPATH%\svn co https://svn.apache.org/repos/asf/httpd/httpd/tags/%HTTPDVER% %ROOT%\httpd-%HTTPDVER%
@@ -470,6 +473,50 @@ python gen-make.py -t dsp --with-httpd=..\httpd-%HTTPDVER% --with-berkeley-db=%B
 
 cd %ROOT%
 python %DIR%\build\win32\make_dist.py --readme=%ROOT%\README.txt svn-win32-%VER% svn-win32-%VER%
+ren svn-win32-%VER%\svn-win32-%VER%_py.zip svn-win32-%VER%_py%PYTHONVER%.zip
+
+
+rem ======= Build for another python version =======
+set PYTHONVER=26
+set PYTHONDIR=C:\Python%PYTHONVER%
+PATH=%PATHBASE%;%PYTHONDIR%
+
+rem ====== Generate VC project files
+cd %ROOT%\%DIR%
+python gen-make.py -t dsp --with-httpd=..\httpd-%HTTPDVER% --with-berkeley-db=%BDBDIR% --with-openssl=..\httpd-%HTTPDVER%\srclib\openssl --with-zlib=..\httpd-%HTTPDVER%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITJAR%
+
+msdev subversion_msvc.dsw /USEENV /MAKE "__SWIG_PYTHON__ - Win32 Release"
+
+rem ====== Regenerate VC project files - make_dist doesn't like junit-dir
+cd %ROOT%\%DIR%
+python gen-make.py -t dsp --with-httpd=..\httpd-%HTTPDVER% --with-berkeley-db=%BDBDIR% --with-openssl=..\httpd-%HTTPDVER%\srclib\openssl --with-zlib=..\httpd-%HTTPDVER%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITDIR%
+
+cd %ROOT%
+python %DIR%\build\win32\make_dist.py --readme=%ROOT%\README.txt svn-win32-%VER% svn-win32-%VER%
+ren svn-win32-%VER%\svn-win32-%VER%_py.zip svn-win32-%VER%_py%PYTHONVER%.zip
+
+
+rem ======= Build for another python version =======
+set PYTHONVER=25
+set PYTHONDIR=C:\Python%PYTHONVER%
+PATH=%PATHBASE%;%PYTHONDIR%
+
+rem ====== Generate VC project files
+cd %ROOT%\%DIR%
+python gen-make.py -t dsp --with-httpd=..\httpd-%HTTPDVER% --with-berkeley-db=%BDBDIR% --with-openssl=..\httpd-%HTTPDVER%\srclib\openssl --with-zlib=..\httpd-%HTTPDVER%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITJAR%
+
+msdev subversion_msvc.dsw /USEENV /MAKE "__SWIG_PYTHON__ - Win32 Release"
+
+rem ====== Regenerate VC project files - make_dist doesn't like junit-dir
+cd %ROOT%\%DIR%
+python gen-make.py -t dsp --with-httpd=..\httpd-%HTTPDVER% --with-berkeley-db=%BDBDIR% --with-openssl=..\httpd-%HTTPDVER%\srclib\openssl --with-zlib=..\httpd-%HTTPDVER%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITDIR%
+
+cd %ROOT%
+python %DIR%\build\win32\make_dist.py --readme=%ROOT%\README.txt svn-win32-%VER% svn-win32-%VER%
+ren svn-win32-%VER%\svn-win32-%VER%_py.zip svn-win32-%VER%_py%PYTHONVER%.zip
+
+
+
 
 :end
 cd %DIR%
