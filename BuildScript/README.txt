@@ -1,7 +1,7 @@
-This is Subversion for Win32, version 1.7.4. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.5. Read the CHANGES file to
 see what changed in this release:
 
-    http://svn.collab.net/repos/svn/branches/1.7.x/CHANGES
+    http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
 
 These binaries were built with:
 
@@ -10,22 +10,18 @@ These binaries were built with:
     APR-ICONV 1.2.1
     Neon 0.29.6
     Berkeley DB 4.8.30
-    OpenSSL 1.0.0g
-    ZLib 1.2.6
+    OpenSSL 1.0.1c
+    ZLib 1.2.7
     Apache 2.2.22
-    Python 2.5.4 , 2.6.6 and 2.7.2
+    Python 2.5.4 , 2.6.6 and 2.7.3 (2.5.6 and 2.6.8 is source only releases)
     Perl 5.14.2 (ActivePerl)
     libintl 0.14.1 (patched)
-	Java 1.6.0_30
+	Java 1.6.0_32
     Ruby 1.8.6
     Cyrus SASL 2.1.23
-    serf 1.0.1
-    sqlite 3.7.10.0
-    SWIG 1.3.24   (newer versions doesn't work with VC++6)
-
-The BDB binaries are at
-
-    http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=688
+    serf 1.0.3
+    sqlite 3.7.11.0
+    SWIG 1.3.40
 
 The patched libintl is at
 
@@ -39,7 +35,7 @@ Please read the Subversion INSTALL file for more information:
 
 Package contents:
 
-    svn-win32-1.7.4/
+    svn-win32-1.7.x/
        README.txt           -- This file
        bin/                 -- All Subversion binaries and supporting DLLs,
           *.exe                including APR DLLs

@@ -23,7 +23,7 @@ set VSCommonDir=
 
 rem ====== Set these shell variables before doing a build.
 rem VER is used to name the output bin dir as svn-win32-%VER%
-set VER=1.7.4
+set VER=1.7.5
 set DIR=src-%VER%
 set DRIVE=C
 set ROOT=%DRIVE%:\SVN-%VER%
@@ -46,11 +46,11 @@ set BDBVER=48
 set BDBDIR=%ROOT%\db-%BDBFULLVER%\build_windows\Win32
 set SWIGVER=1.3.40
 set SWIGDIR=%ROOT%\SWIGWIN-%SWIGVER%
-set JAVADIR=C:\Program Files\Java\jdk1.6.0_30
+set JAVADIR=C:\Program Files\Java\jdk1.6.0_32
 set JUNITVER=4.10
 set JUNITDIR=%ROOT%\junit%JUNITVER%
 set JUNITJAR=%JUNITDIR%\junit-%JUNITVER%.jar
-set OPENSSLVER=1.0.0g
+set OPENSSLVER=1.0.1c
 set HTTPDVER=2.2.22
 set SASLVER=2.1.23
 set APRVER=1.4.5
@@ -59,11 +59,11 @@ set APRICONVVER=1.2.1
 set NEONVER=0.29.6
 set NEONMAJORVER=0
 set NEONMINORVER=29
-set SERFVER=1.0.1
+set SERFVER=1.0.3
 set SVNBINPATH="C:\Program Files\Subversion\bin\"
-set ZLIBVER=1.2.6
-set ZLIBFILEVER=126
-set SQLITEVER=3071000
+set ZLIBVER=1.2.7
+set ZLIBFILEVER=127
+set SQLITEVER=3071100
 set 7ZIP="C:\Program Files\7-Zip\7z.exe"
 set WGET="C:\Program Files\GnuWin32\bin\wget.exe"
 rem ====== End of shell variables which need to be set.
@@ -122,7 +122,8 @@ rem ****** patch neon\config.hw with neon version number
 %AWKDIR%\awk.exe "{gsub(/@VERSION@/,\"%NEONVER%\");gsub(/@MAJOR@/,\"%NEONMAJORVER%\");gsub(/@MINOR@/,\"%NEONMINORVER%\")};1" %ROOT%\%DIR%\neon\config.hw.in > %ROOT%\%DIR%\neon\config.hw
 
 rem Get zlib
-%WGET% --directory-prefix=%DLDIR% http://prdownloads.sourceforge.net/libpng/zlib%ZLIBFILEVER%.zip?download
+REM ***** %WGET% --directory-prefix=%DLDIR% http://prdownloads.sourceforge.net/libpng/zlib%ZLIBFILEVER%.zip?download
+%WGET% --directory-prefix=%DLDIR% http://zlib.net/zlib%ZLIBFILEVER%.zip
 %7ZIP% x %DLDIR%\zlib%ZLIBFILEVER%.zip -o%ROOT%\httpd-%HTTPDVER%\srclib\
 ren %ROOT%\httpd-%HTTPDVER%\srclib\zlib-%ZLIBVER% zlib
 
