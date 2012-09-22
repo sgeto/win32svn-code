@@ -25,8 +25,10 @@ rem ====== Set these shell variables before doing a build.
 rem VER is used to name the output bin dir as svn-win32-%VER%
 set VER=1.7.6
 set DIR=src-%VER%
+set HTTPDVER=2.4.2
+set HTTPDVER_SHORT=24
 set DRIVE=C
-set ROOT=%DRIVE%:\SVN-%VER%
+set ROOT=%DRIVE%:\SVN-%VER%-%HTTPDVER_SHORT%
 set DLDIR=%ROOT%\Download
 set PYTHONVER=27
 set PYTHONDIR=C:\Python%PYTHONVER%
@@ -51,10 +53,9 @@ set JUNITVER=4.10
 set JUNITDIR=%ROOT%\junit%JUNITVER%
 set JUNITJAR=%JUNITDIR%\junit-%JUNITVER%.jar
 set OPENSSLVER=1.0.1c
-set HTTPDVER=2.2.22
 set SASLVER=2.1.23
 set APRVER=1.4.6
-set APRUTILVER=1.3.12
+set APRUTILVER=1.4.1
 set APRICONVVER=1.2.1
 set NEONVER=0.29.6
 set NEONMAJORVER=0
@@ -64,12 +65,13 @@ set SVNBINPATH="C:\Program Files\Subversion\bin\"
 set ZLIBVER=1.2.7
 set ZLIBFILEVER=127
 set SQLITEVER=3071300
+set PCREVER=8.31
 set 7ZIP="C:\Program Files\7-Zip\7z.exe"
 set WGET="C:\Program Files\GnuWin32\bin\wget.exe"
 rem ====== End of shell variables which need to be set.
 
 rem Set up path to include Python and BDB.
-PATH=%PATH%;%NASMDIR%;%BDBDIR%;%AWKDIR%;%GETTEXTBIN%;%RUBYDIR%\bin;%JAVADIR%\bin
+PATH=%PATH%;%NASMDIR%;%BDBDIR%;%AWKDIR%;%GETTEXTBIN%;%RUBYDIR%\bin;%JAVADIR%\bin;%CMAKEDIR%\bin
 set PATHBASE=%PATH%
 PATH=%PATHBASE%;%PYTHONDIR%
 
@@ -111,6 +113,66 @@ ren %ROOT%\httpd-%HTTPDVER%\srclib\apr-util\dbd\apr_dbd_odbc.c apr_dbd_odbc.c.in
 
 rem Get Apache APR-Iconv Source code
 %SVNBINPATH%\svn co https://svn.apache.org/repos/asf/apr/apr-iconv/tags/%APRICONVVER% %ROOT%\httpd-%HTTPDVER%\srclib\apr-iconv
+
+rem Get PCRE Source code
+%WGET% --directory-prefix=%DLDIR% http://sourceforge.net/projects/pcre/files/pcre/%PCREVER%/pcre-%PCREVER%.zip/download
+%7ZIP% x %DLDIR%\pcre-%PCREVER%.zip -o%ROOT%\httpd-%HTTPDVER%\srclib\
+ren %ROOT%\httpd-%HTTPDVER%\srclib\pcre-%PCREVER% pcre
+pushd %ROOT%\httpd-%HTTPDVER%\srclib\pcre
+
+rem copy config.h.generic config.h
+%AWKDIR%\awk.exe "{gsub(/#define HAVE_DIRENT_H 1/,\"/*#define HAVE_DIRENT_H 1*/\") };1" config.h.generic | ^
+%AWKDIR%\awk.exe "{gsub(/#define HAVE_UNISTD_H 1/,\"/*#define HAVE_UNISTD_H 1*/\") };1" > config.h
+
+copy pcre.h.generic pcre.h
+
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+dftables.c
+
+dftables.exe pcre_chartables.c
+
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+/c pcre_byte_order.c pcre_chartables.c pcre_compile.c pcre_config.c ^
+pcre_dfa_exec.c pcre_exec.c pcre_fullinfo.c pcre_get.c pcre_globals.c ^
+pcre_jit_compile.c pcre_maketables.c pcre_newline.c pcre_ord2utf8.c ^
+pcre_refcount.c pcre_string_utils.c pcre_study.c pcre_tables.c ^
+pcre_ucd.c pcre_valid_utf8.c pcre_version.c pcre_xclass.c
+
+lib /NAME:pcre.dll /DEF /OUT:pcre.lib pcre_byte_order.obj pcre_chartables.obj ^
+pcre_compile.obj pcre_config.obj pcre_dfa_exec.obj pcre_exec.obj ^
+pcre_fullinfo.obj pcre_get.obj pcre_globals.obj pcre_jit_compile.obj ^
+pcre_maketables.obj pcre_newline.obj pcre_ord2utf8.obj ^
+pcre_refcount.obj pcre_string_utils.obj pcre_study.obj pcre_tables.obj ^
+pcre_ucd.obj pcre_valid_utf8.obj pcre_version.obj pcre_xclass.obj
+
+link /DLL /OUT:pcre.dll pcre_byte_order.obj pcre_chartables.obj pcre_compile.obj ^
+pcre_config.obj pcre_dfa_exec.obj pcre_exec.obj pcre_fullinfo.obj ^
+pcre_get.obj pcre_globals.obj pcre_jit_compile.obj pcre_maketables.obj ^
+pcre_newline.obj pcre_ord2utf8.obj pcre_refcount.obj pcre_string_utils.obj pcre_study.obj ^
+pcre_tables.obj pcre_ucd.obj pcre_valid_utf8.obj ^
+pcre_version.obj pcre_xclass.obj
+
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+/c pcreposix.c
+
+lib /NAME:pcreposix.dll /DEF /OUT:pcreposix.lib pcreposix.obj
+
+link /DLL /OUT:pcreposix.dll pcreposix.obj pcre.lib
+
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+pcretest.c pcre_printint.c pcre.lib pcreposix.lib
+
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+pcregrep.c pcre.lib
+// if no unistd.h and dirent.h files, please delete same lines in config.h
+
+pcretest testdata\testinput1 testdata\myoutput1
+awk "FNR>2" testdata\myoutput1 > testdata\myoutput2
+fc testdata\testoutput1 testdata\myoutput2
+if ERRORLEVEL 1 ECHO "PCRE Tests failed"
+popd
+
+rem %SVNBINPATH%\svn co svn://vcs.exim.org/pcre/code/tags/pcre-8.30 %ROOT%\httpd-%HTTPDVER%\srclib\pcre
 
 rem Get Serf Source code
 %SVNBINPATH%\svn co http://serf.googlecode.com/svn/tags/%SERFVER% %ROOT%\%DIR%\serf
@@ -450,8 +512,8 @@ cd %ROOT%\%DIR%
 python win-tests.py -c -r -v
 python win-tests.py -c -r -v -f bdb
 python win-tests.py -c -r -v -u svn://localhost
-python win-tests.py -c -r -v -u http://localhost:8022 --http-library=neon
-python win-tests.py -c -r -v -u http://localhost:8022 --http-library=serf
+python win-tests.py -c -r -v -u http://localhost:8024 --http-library=neon
+python win-tests.py -c -r -v -u http://localhost:8024 --http-library=serf
 
 rem python win-tests.py -c -r -v --javahl
 rem python win-tests.py -c -r -v -f bdb --javahl
@@ -466,7 +528,7 @@ cd %ROOT%
 %AWKDIR%\awk.exe "{gsub(/zip.exe/,\"C:/zip/zip.exe\"); };1" %DIR%\build\win32\make_dist.conf.temp > %DIR%\build\win32\make_dist.conf
 
 rem copy ReadMe to right folder
-copy /Y C:\win32svn\BuildScript\README.txt %ROOT%\README.txt
+copy /Y C:\win32svn\BuildScript\README_ap24.txt %ROOT%\README.txt
 
 rem ====== Regenerate VC project files - make_dist doesn't like junit-dir
 cd %ROOT%\%DIR%
