@@ -6,13 +6,14 @@ see what changed in this release:
 These binaries were built with:
 
     APR 1.4.6
-    APR-util 1.3.12
+    APR-util 1.4.1
     APR-ICONV 1.2.1
     Neon 0.29.6
     Berkeley DB 4.8.30
     OpenSSL 1.0.1c
     ZLib 1.2.7
-    Apache 2.2.22
+    Apache 2.4.2
+	PCRE 8.31
     Python 2.5.4 , 2.6.6 and 2.7.3 (2.5.6 and 2.6.8 is source only releases)
     Perl 5.14.2 (ActivePerl)
     libintl 0.14.1 (patched)
