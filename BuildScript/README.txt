@@ -1,7 +1,11 @@
-This is Subversion for Win32, version 1.7.6. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.7. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
+	
+This release also includes patch with revision 1397428
+	"Allows crashing 'svn' with an explicit --username that doesn't match the stored username."
+
 
 These binaries were built with:
 
@@ -12,7 +16,7 @@ These binaries were built with:
     Berkeley DB 4.8.30
     OpenSSL 1.0.1c
     ZLib 1.2.7
-    Apache 2.2.22
+    Apache 2.2.23
     Python 2.5.4 , 2.6.6 and 2.7.3 (2.5.6 and 2.6.8 is source only releases)
     Perl 5.14.2 (ActivePerl)
     libintl 0.14.1 (patched)
