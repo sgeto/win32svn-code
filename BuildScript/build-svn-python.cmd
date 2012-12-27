@@ -1,7 +1,7 @@
 @IF DEFINED %NOECHO% echo off
 
-echo ====== Build svn python bindings ======
-echo ====== Build svn python bindings ====== > %LOG_DIR%\build-svn-python.log
+echo ====== Build svn python bindings ver %PYTHONVER% ======
+echo ====== Build svn python bindings ver %PYTHONVER% ====== > %LOG_DIR%\build-svn-python.log
 pushd %ROOT%\%DIR%
 IF ERRORLEVEL 1 GOTO DIR_FAIL
 
