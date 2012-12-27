@@ -4,7 +4,7 @@ echo ====== Get pcre Source code ======
 echo ====== Get pcre Source code ====== > %LOG_DIR%\get-pcre-source.log
 IF %HTTPDVER%==22 GOTO SKIP_PCRE
 
-%WGET% --directory-prefix=%DLDIR% http://sourceforge.net/projects/pcre/files/pcre/%PCREVER%/pcre-%PCREVER%.zip/download >> %LOG_DIR%\get-pcre-source.log 2>>&1
+%WGET% -N --directory-prefix=%DLDIR% http://sourceforge.net/projects/pcre/files/pcre/%PCREVER%/pcre-%PCREVER%.zip/download >> %LOG_DIR%\get-pcre-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO DL_FAIL
 
 echo ====== Extract pcre ======
@@ -18,9 +18,13 @@ IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 
 rem copy config.h.generic config.h
-%AWKDIR%\awk.exe "{gsub(/#define HAVE_DIRENT_H 1/,\"/*#define HAVE_DIRENT_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.generic > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.temp 2>> %LOG_DIR%\get-pcre-source.log 
+%AWKDIR%\awk.exe "{gsub(/#define HAVE_DIRENT_H 1/,\"/*#define HAVE_DIRENT_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.generic > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp1 2>> %LOG_DIR%\get-pcre-source.log 
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
-%AWKDIR%\awk.exe "{gsub(/#define HAVE_UNISTD_H 1/,\"/*#define HAVE_UNISTD_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.temp > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h 2>> %LOG_DIR%\get-pcre-source.log 
+%AWKDIR%\awk.exe "{gsub(/#define HAVE_STDINT_H 1/,\"/*#define HAVE_STDINT_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp1 > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp2 2>> %LOG_DIR%\get-pcre-source.log 
+IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
+%AWKDIR%\awk.exe "{gsub(/#define HAVE_INTTYPES_H 1/,\"/*#define HAVE_INTTYPES_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp2 > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp3 2>> %LOG_DIR%\get-pcre-source.log 
+IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
+%AWKDIR%\awk.exe "{gsub(/#define HAVE_UNISTD_H 1/,\"/*#define HAVE_UNISTD_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp3 > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h 2>> %LOG_DIR%\get-pcre-source.log 
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 
 copy /y  %ROOT%\%HTTPDDIR%\srclib\pcre\pcre.h.generic  %ROOT%\%HTTPDDIR%\srclib\pcre\pcre.h >> %LOG_DIR%\get-pcre-source.log 2>>&1
