@@ -1,12 +1,12 @@
 @IF DEFINED %NOECHO% echo off
 
 echo ====== Set component version environment variables ======
-set VER=1.7.7
+set VER=1.7.8
 set PYTHONVER=2.7
 set RUBYVER=1.8.6
 set BDBFULLVER=4.8.30
 set SWIGVER=1.3.40
-set JAVAVER=1.6.0_33
+set JAVAVER=1.6.0_38
 set JUNITVER=4.10
 set OPENSSLVER=1.0.1c
 set HTTPDFULLVER=2.2.23
@@ -14,13 +14,13 @@ set HTTPDFULLVER=2.2.23
 set SASLVER=2.1.23
 set APRVER=1.4.6
 set APRUTILVER=1.3.12
-::set APRUTILVER=1.4.1
+::set APRUTILVER=1.4.2
 set APRICONVVER=1.2.1
 set NEONVER=0.29.6
-set SERFVER=1.1.0
+set SERFVER=1.1.1
 set ZLIBVER=1.2.7
-set SQLITEVER=3.7.13.0
-set PCREVER=8.31
+set SQLITEVER=3.7.15.0
+set PCREVER=8.32
 
 
 :PYTHON
