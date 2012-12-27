@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.7.7. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.8. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
@@ -20,11 +20,11 @@ These binaries were built with:
     Python 2.5.4 , 2.6.6 and 2.7.3 (2.5.6 and 2.6.8 is source only releases)
     Perl 5.14.2 (ActivePerl)
     libintl 0.14.1 (patched)
-	Java 1.6.0_33
+	Java 1.6.0_38
     Ruby 1.8.6
     Cyrus SASL 2.1.23
-    serf 1.1.0
-    sqlite 3.7.13.0
+    serf 1.1.1
+    sqlite 3.7.15.0
     SWIG 1.3.40
 
 The patched libintl is at
