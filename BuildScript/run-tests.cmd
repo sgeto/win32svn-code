@@ -6,7 +6,6 @@ set PATHORG=%PATH%
 PATH=%ROOT%\svn-win32-%VER%\svn-win32-%VER%\bin;%PATH%
 pushd %ROOT%\%DIR%
 
-goto TEST
 
 echo ----- Test fsfs ------
 echo ----- Test fsfs ------ >> %LOG_DIR%\run-tests.log
@@ -24,12 +23,10 @@ python win-tests.py -c -r -v -u svn://localhost >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 %SYSINTERNALS%\pskill.exe -t svnserve.exe
 
-:TEST
 
 start "HTTPD" "%HTTPDINSTDIR%\bin\httpd.exe"
 echo ----- Test http-neon ------
 echo ----- Test http-neon ------ >> %LOG_DIR%\run-tests.log
-python win-tests.py 
 python win-tests.py -c -r -v -u http://localhost:80%HTTPDVER% --http-library=neon >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
