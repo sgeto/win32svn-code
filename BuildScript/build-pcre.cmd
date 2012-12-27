@@ -7,14 +7,14 @@ IF %HTTPDVER%==22 GOTO SKIP_PCRE
 pushd %ROOT%\%HTTPDDIR%\srclib\pcre
 IF ERRORLEVEL 1 GOTO DIR_FAIL
 
-cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF ^
 dftables.c >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
 dftables.exe pcre_chartables.c >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
-cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF ^
 /c pcre_byte_order.c pcre_chartables.c pcre_compile.c pcre_config.c ^
 pcre_dfa_exec.c pcre_exec.c pcre_fullinfo.c pcre_get.c pcre_globals.c ^
 pcre_jit_compile.c pcre_maketables.c pcre_newline.c pcre_ord2utf8.c ^
@@ -38,7 +38,7 @@ pcre_tables.obj pcre_ucd.obj pcre_valid_utf8.obj ^
 pcre_version.obj pcre_xclass.obj >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
-cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF ^
 /c pcreposix.c >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
@@ -48,11 +48,11 @@ IF ERRORLEVEL 1 GOTO BUILD_FAIL
 link /DLL /OUT:pcreposix.dll pcreposix.obj pcre.lib >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
-cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF ^
 pcretest.c pcre_printint.c pcre.lib pcreposix.lib >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
-cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF -DHAVE_STDINT_H=0 -DHAVE_INTTYPES_H=0 ^
+cl -DHAVE_CONFIG_H -DSUPPORT_UCP -DSUPPORT_UTF ^
 pcregrep.c pcre.lib >> %LOG_DIR%\build-pcre.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 :: if no unistd.h and dirent.h files, please delete same lines in config.h
