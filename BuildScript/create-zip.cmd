@@ -10,7 +10,9 @@ PATH=%ROOT%\svn-win32-%VER%\svn-win32-%VER%\bin;%PATH%
 IF ERRORLEVEL 1 GOTO AWK_FAIL
 %AWKDIR%\awk.exe "{gsub(/zip.exe/,\"%ZIPEXE%\"); };1" %DIR%\build\win32\make_dist.conf.temp1 > %DIR%\build\win32\make_dist.conf.temp2 2>> %LOG_DIR%\create-zip.log
 IF ERRORLEVEL 1 GOTO AWK_FAIL
-%AWKDIR%\awk.exe "{gsub(/C:\/Program Files\/ruby/,\"%RUBYDIRAWK%\"); };1" %DIR%\build\win32\make_dist.conf.temp2 > %DIR%\build\win32\make_dist.conf 2>> %LOG_DIR%\create-zip.log
+%AWKDIR%\awk.exe "{gsub(/jdk1.5.0_04/,\"jdk%JAVAVER%\"); };1" %DIR%\build\win32\make_dist.conf.temp2 > %DIR%\build\win32\make_dist.conf.temp3 2>> %LOG_DIR%\create-zip.log
+IF ERRORLEVEL 1 GOTO AWK_FAIL
+%AWKDIR%\awk.exe "{gsub(/C:\/Program Files\/ruby/,\"%RUBYDIRAWK%\"); };1" %DIR%\build\win32\make_dist.conf.temp3 > %DIR%\build\win32\make_dist.conf 2>> %LOG_DIR%\create-zip.log
 IF ERRORLEVEL 1 GOTO AWK_FAIL
 
 
