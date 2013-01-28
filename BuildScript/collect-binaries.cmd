@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Collect binaries ======
 echo ====== Collect binaries ====== > %LOG_DIR%\collect-binaries.log

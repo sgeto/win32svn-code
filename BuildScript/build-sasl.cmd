@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build sasl ======
 echo ====== Build sasl ====== > %LOG_DIR%\build-sasl.log

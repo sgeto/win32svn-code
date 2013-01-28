@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build svn main ======
 echo ====== Build svn main  ====== > %LOG_DIR%\build-svn-main.log

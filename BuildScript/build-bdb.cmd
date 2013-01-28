@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build bdb ======
 echo ====== Build bdb ====== > %LOG_DIR%\build-bdb.log

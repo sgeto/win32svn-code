@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get Subversion Source code ======
 echo ====== Get Subversion Source code ====== > %LOG_DIR%\get-svn-source.log

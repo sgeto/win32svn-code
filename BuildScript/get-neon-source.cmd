@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get Neon Source code ======
 echo ====== Get Neon Source code ====== > %LOG_DIR%\get-neon-source.log

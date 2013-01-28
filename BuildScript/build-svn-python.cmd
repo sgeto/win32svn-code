@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build svn python bindings ver %PYTHONVER% ======
 echo ====== Build svn python bindings ver %PYTHONVER% ====== > %LOG_DIR%\build-svn-python.log

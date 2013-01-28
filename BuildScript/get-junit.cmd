@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get junit ======
 echo ====== Get junit ====== > %LOG_DIR%\get-junit.log

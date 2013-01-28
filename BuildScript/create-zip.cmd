@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Create zip ======
 echo ====== Create zip ====== > %LOG_DIR%\create-zip.log

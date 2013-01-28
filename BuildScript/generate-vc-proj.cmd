@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Generate VC projects ======
 echo ====== Generate VC projects ====== > %LOG_DIR%\generate-vc-proj.log

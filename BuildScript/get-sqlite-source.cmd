@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get sqlite Source code ======
 echo ====== Get sqlite Source code ====== > %LOG_DIR%\get-sqlite-source.log

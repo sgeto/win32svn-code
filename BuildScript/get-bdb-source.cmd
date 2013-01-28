@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get bdb Source code ======
 echo ====== Get bdb Source code  ====== > %LOG_DIR%\get-bdb-source.log

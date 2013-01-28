@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get pcre Source code ======
 echo ====== Get pcre Source code ====== > %LOG_DIR%\get-pcre-source.log

@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Remove zip ======
 echo ====== Remove zip ====== > %LOG_DIR%\remove-zip.log

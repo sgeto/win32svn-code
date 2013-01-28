@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Extra Patch ======
 echo ====== Extra Patch ====== > %LOG_DIR%\extra-patch.log

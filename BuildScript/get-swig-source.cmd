@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get swig Source code ======
 echo ====== Get swig Source code ====== > %LOG_DIR%\get-swig-source.log
