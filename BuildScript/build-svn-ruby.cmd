@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build svn ruby bindings ======
 echo ====== Build svn ruby bindings ====== > %LOG_DIR%\build-svn-ruby.log

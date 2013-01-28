@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get zlib Source code ======
 echo ====== Get zlib Source code ====== > %LOG_DIR%\get-zlib-source.log

@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get apr Source code ======
 echo ====== Get apr Source code ====== > %LOG_DIR%\get-apr-source.log

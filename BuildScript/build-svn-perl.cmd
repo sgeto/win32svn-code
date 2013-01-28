@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build svn perl bindings ======
 echo ====== Build svn perl bindings ====== > %LOG_DIR%\build-svn-perl.log

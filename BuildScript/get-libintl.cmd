@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get libintl ======
 echo ====== Get libintl ====== > %LOG_DIR%\get-libintl.log

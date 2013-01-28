@@ -1,7 +1,7 @@
 @setlocal
 @IF '%1'=='OFF' set NOECHO=NOECHO
 @IF '%1'=='off' set NOECHO=NOECHO
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 set SCRIPT_DIR=%cd%
 set LOG_DIR=%SCRIPT_DIR%\log

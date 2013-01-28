@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build httpd ======
 echo ====== Build httpd ====== > %LOG_DIR%\build-httpd.log

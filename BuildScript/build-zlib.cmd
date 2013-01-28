@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build zlib ======
 echo ====== Build zlib ====== > %LOG_DIR%\build-zlib.log

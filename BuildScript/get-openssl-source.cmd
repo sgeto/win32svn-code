@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get openssl Source code ======
 echo ====== Get openssl Source code ====== > %LOG_DIR%\get-openssl-source.log

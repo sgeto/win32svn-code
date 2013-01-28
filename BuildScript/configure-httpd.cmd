@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Configure httpd ======
 echo ====== Configure httpd ====== > %LOG_DIR%\configure-httpd.log

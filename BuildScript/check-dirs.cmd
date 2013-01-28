@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Check Directories ======
 echo ====== Check Directories====== > %LOG_DIR%\check-dirs.log

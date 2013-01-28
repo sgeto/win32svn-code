@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Set Visual studio environment ======
 set VSCommonDir=C:\Program Files\Microsoft Visual Studio\Common

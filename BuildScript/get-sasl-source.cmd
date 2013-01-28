@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get Cyrus SASL Source code ======
 echo ====== Get Cyrus SASL Source code ====== > %LOG_DIR%\get-sasl-source.log

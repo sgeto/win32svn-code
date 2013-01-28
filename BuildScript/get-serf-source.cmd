@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get Serf Source code ======
 echo ====== Get Serf Source code ====== > %LOG_DIR%\get-serf-source.log

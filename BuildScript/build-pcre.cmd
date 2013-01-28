@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build pcre ======
 echo ====== Build pcre ====== > %LOG_DIR%\build-pcre.log

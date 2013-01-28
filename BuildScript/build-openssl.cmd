@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build openssl ======
 echo ====== Build openssl ====== > %LOG_DIR%\build-openssl.log

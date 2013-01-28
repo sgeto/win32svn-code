@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Run tests ======
 echo ====== Run tests ====== > %LOG_DIR%\run-tests.log

@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Build svn javahl bindings ======
 echo ====== Build svn javahl bindings ====== > %LOG_DIR%\build-svn-javahl.log

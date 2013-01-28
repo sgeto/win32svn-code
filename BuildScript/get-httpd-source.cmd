@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Get httpd Source code ======
 echo ====== Get httpd Source code ====== > %LOG_DIR%\get-httpd-source.log
