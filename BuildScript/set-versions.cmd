@@ -1,8 +1,7 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Set component version environment variables ======
 set VER=1.7.8
-set PYTHONVER=2.7
 set RUBYVER=1.8.6
 set BDBFULLVER=4.8.30
 set SWIGVER=1.3.40
@@ -22,9 +21,6 @@ set ZLIBVER=1.2.7
 set SQLITEVER=3.7.15.0
 set PCREVER=8.32
 
-
-:PYTHON
-for /f "tokens=1,2 delims=/." %%a in ("%PYTHONVER%") do set PYTHONFILEVER=%%a%%b
 
 :RUBY
 for /f "tokens=1,2,3 delims=/." %%a in ("%RUBYVER%") do set RUBYFILEVER=%%a%%b%%c
