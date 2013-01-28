@@ -1,4 +1,4 @@
-@IF DEFINED %NOECHO% echo off
+@IF DEFINED NOECHO echo off
 
 echo ====== Set directories environment variables ======
 
@@ -28,10 +28,10 @@ set WGET="C:\Program Files\GnuWin32\bin\wget.exe"
 set ZIPEXE=C:/zip/zip.exe
 set SYSINTERNALS="C:\Program Files\SysInternals\"
 
-rem Set up path to include Python and BDB.
-set PATHBASE=%PATH%
-PATH=%PATHBASE%;%NASMDIR%;%RUBYDIR%\bin;%GETTEXTBIN%
+PATH=%PATH%;%NASMDIR%;%RUBYDIR%\bin;%GETTEXTBIN%
+IF NOT DEFINED PATHBASE set PATHBASE=%PATH%
 ::%BDBDIR%;%AWKDIR%;%GETTEXTBIN%;%JAVADIR%\bin
+rem Set up path to include Python and BDB.
 ::PATH=%PATHBASE%;%PYTHONDIR%
 
 rem set Classpath for javahl tests
