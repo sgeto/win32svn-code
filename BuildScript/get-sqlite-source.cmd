@@ -2,7 +2,7 @@
 
 echo ====== Get sqlite Source code ======
 echo ====== Get sqlite Source code ====== > %LOG_DIR%\get-sqlite-source.log
-%WGET% -N --directory-prefix=%DLDIR% http://www.sqlite.org/sqlite-amalgamation-%SQLITEFILEVER%.zip >> %LOG_DIR%\get-sqlite-source.log 2>>&1
+%WGET% -N --directory-prefix=%DLDIR% http://www.sqlite.org/%SQLITEYEAR%/sqlite-amalgamation-%SQLITEFILEVER%.zip >> %LOG_DIR%\get-sqlite-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO CO_FAIL
 
 echo ====== Extract sqlite ======

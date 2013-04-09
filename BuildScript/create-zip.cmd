@@ -17,7 +17,7 @@ IF ERRORLEVEL 1 GOTO AWK_FAIL
 
 
 rem copy ReadMe to right folder
-copy /Y C:\win32svn\BuildScript\README.txt %ROOT%\README.txt >> %LOG_DIR%\create-zip.log 2>>&1
+copy /Y C:\win32svn\BuildScript\README_ap%HTTPDVER%.txt %ROOT%\README.txt >> %LOG_DIR%\create-zip.log 2>>&1
 IF ERRORLEVEL 1 GOTO COPY_FAIL
 
 rem ====== Regenerate VC project files - make_dist doesn't like junit-dir

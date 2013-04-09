@@ -19,6 +19,8 @@ IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 echo ----- Test svn ------
 echo ----- Test svn ------ >> %LOG_DIR%\run-tests.log
+netsh firewall add allowedprogram "%ROOT%\%DIR%\Release\subversion\svnserve\svnserve.exe" svnserve-%VER%-%HTTPDVER% >> %LOG_DIR%\run-tests.log 2>>&1
+IF ERRORLEVEL 1 GOTO TEST_FAIL
 python win-tests.py -c -r -v -u svn://localhost >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 %SYSINTERNALS%\pskill.exe -t svnserve.exe

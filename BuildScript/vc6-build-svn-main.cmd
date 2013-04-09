@@ -3,10 +3,6 @@
 @IF '%1'=='off' set NOECHO=NOECHO
 @IF DEFINED NOECHO echo off
 
-set SCRIPT_DIR=%cd%
-set LOG_DIR=%SCRIPT_DIR%\log
-rmdir /s /q %LOG_DIR%
-mkdir %LOG_DIR%
 
 call set-vc-env.cmd
 IF ERRORLEVEL 1 GOTO END
@@ -14,12 +10,17 @@ IF ERRORLEVEL 1 GOTO END
 call set-versions.cmd
 IF ERRORLEVEL 1 GOTO END
 
+
 call set-dirs.cmd
 IF ERRORLEVEL 1 GOTO END
 
 call set-python-ver.cmd 2.7
 IF ERRORLEVEL 1 GOTO END
 
+set SCRIPT_DIR=%cd%
+set LOG_DIR=%SCRIPT_DIR%\log-%VER%-%HTTPDVER%
+rmdir /s /q %LOG_DIR%
+mkdir %LOG_DIR%
 
 
 rem ===== Get Sources =====
