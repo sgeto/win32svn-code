@@ -36,6 +36,6 @@ type %LOG_DIR%\get-sqlite-source.log
 exit /B 1
 
 :PATCH_FAIL
-echo ****** Neon Patch failed ****** >> %LOG_DIR%\get-neon-source.log
+echo ****** sqlite Patch failed ****** >> %LOG_DIR%\get-sqlite-source.log
 type %LOG_DIR%\get-neon-source.log
 exit /B 1

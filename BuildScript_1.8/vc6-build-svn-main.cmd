@@ -1,4 +1,4 @@
-@setlocal
+::@setlocal
 @IF '%1'=='OFF' set NOECHO=NOECHO
 @IF '%1'=='off' set NOECHO=NOECHO
 @IF DEFINED NOECHO echo off
@@ -22,6 +22,7 @@ set LOG_DIR=%SCRIPT_DIR%\log-%VER%-%HTTPDVER%
 rmdir /s /q %LOG_DIR%
 mkdir %LOG_DIR%
 
+::goto TEST
 
 rem ===== Get Sources =====
 call get-svn-source.cmd
@@ -37,9 +38,6 @@ call get-pcre-source.cmd
 IF ERRORLEVEL 1 GOTO END
 
 call get-serf-source.cmd
-IF ERRORLEVEL 1 GOTO END
-
-call get-neon-source.cmd
 IF ERRORLEVEL 1 GOTO END
 
 call get-zlib-source.cmd
@@ -64,6 +62,9 @@ call get-sasl-source.cmd
 IF ERRORLEVEL 1 GOTO END
 
 call get-swig-source.cmd
+IF ERRORLEVEL 1 GOTO END
+
+call get-gtest-source.cmd
 IF ERRORLEVEL 1 GOTO END
 
 IF EXIST extra-patch.cmd call extra-patch.cmd
@@ -93,6 +94,8 @@ IF ERRORLEVEL 1 GOTO END
 call build-httpd.cmd
 IF ERRORLEVEL 1 GOTO END
 
+:TEST
+
 call build-svn-main.cmd
 IF ERRORLEVEL 1 GOTO END
 
@@ -120,16 +123,6 @@ IF ERRORLEVEL 1 GOTO END
 
 
 call set-python-ver.cmd 2.6
-IF ERRORLEVEL 1 GOTO END
-call generate-vc-proj.cmd
-IF ERRORLEVEL 1 GOTO END
-call build-svn-python.cmd
-IF ERRORLEVEL 1 GOTO END
-call create-zip.cmd
-IF ERRORLEVEL 1 GOTO END
-
-
-call set-python-ver.cmd 2.5
 IF ERRORLEVEL 1 GOTO END
 call generate-vc-proj.cmd
 IF ERRORLEVEL 1 GOTO END

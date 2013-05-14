@@ -10,7 +10,7 @@ echo ----- Configure -----
 IF ERRORLEVEL 1 GOTO CONFIG_FAIL
 
 echo ----- Build -----
-msdev %HTTPDDIR%\apache.dsw /MAKE "BuildBin - Win32 Release" >> %LOG_DIR%\build-httpd.log 2>>&1
+msdev %HTTPDDIR%\apache.dsw /MAKE "BuildBin - Win32 %MODE%" >> %LOG_DIR%\build-httpd.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
 popd
