@@ -7,10 +7,10 @@ IF ERRORLEVEL 1 GOTO DIR_FAIL
 
 set VERBOSE=1
 set prefix=%ROOT%\cyrus-sasl-%SASLVER%\Build
-set CFG=Release
+set CFG=%MODE%
 set DB_LIB=libdb%BDBVER%.lib
 set DB_INCLUDE=%ROOT%\db-%BDBFULLVER%\build_windows
-set DB_LIBPATH=%ROOT%\db-%BDBFULLVER%\build_windows\Win32\Release
+set DB_LIBPATH=%ROOT%\db-%BDBFULLVER%\build_windows\Win32\%MODE%
 set OPENSSL_INCLUDE=%ROOT%\%HTTPDDIR%\srclib\openssl\inc32
 set OPENSSL_LIBPATH=%ROOT%\%HTTPDDIR%\srclib\openssl\out32dll
 set GSSAPI=CyberSafe 

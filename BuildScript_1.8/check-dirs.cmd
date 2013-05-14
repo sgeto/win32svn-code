@@ -14,7 +14,6 @@ if not exist %HTTPDDIR%\srclib\openssl goto opensslerr
 if not exist %DIR% goto svnerr
 if not exist %HTTPDDIR%\srclib\zlib goto zliberr
 if not exist db-%BDBFULLVER% goto bdberr
-if not exist %DIR%\neon goto neonerr
 if not exist cyrus-sasl-%SASLVER% goto cyrussaslerr
 popd
 exit /B 0
@@ -36,9 +35,6 @@ echo Unable to find zlib >> %LOG_DIR%\check-dirs.log
 goto FAIL
 :bdberr
 echo Unable to find Berekely DB >> %LOG_DIR%\check-dirs.log
-goto FAIL
-:neonerr
-echo Unable to find neon >> %LOG_DIR%\check-dirs.log
 goto FAIL
 :cyrussaslerr
 echo Unable to find cyrus-sasl >> %LOG_DIR%\check-dirs.log

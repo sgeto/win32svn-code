@@ -1,12 +1,12 @@
 @IF DEFINED NOECHO echo off
 
-echo ====== Build svn main ======
-echo ====== Build svn main  ====== > %LOG_DIR%\build-svn-main.log
+echo ====== Build svn main %MODE% ======
+echo ====== Build svn main %MODE% ====== > %LOG_DIR%\build-svn-main.log
 pushd %ROOT%\%DIR%
 IF ERRORLEVEL 1 GOTO DIR_FAIL
 
 echo ----- Build -----
-msdev subversion_msvc.dsw /USEENV /MAKE "__ALL_TESTS__ - Win32 Release" >> %LOG_DIR%\build-svn-main.log 2>>&1
+msdev subversion_msvc.dsw /USEENV /MAKE "__ALL_TESTS__ - Win32 %MODE%" >> %LOG_DIR%\build-svn-main.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
 popd
