@@ -6,21 +6,21 @@ see what changed in this release:
 These binaries were built with:
 
     APR 1.4.6
-    APR-util 1.4.2
+    APR-util 1.5.2
     APR-ICONV 1.2.1
     Berkeley DB 4.8.30
     OpenSSL 1.0.1e
-    ZLib 1.2.7
+    ZLib 1.2.8
     Apache 2.4.4
     PCRE 8.32
-    Python 2.5.4 , 2.6.6 and 2.7.3 (2.5.6 and 2.6.8 is source only releases)
+    Python 2.6.6 and 2.7.3 (2.6.8 is source only release)
     Perl 5.16.3 (ActivePerl)
     libintl 0.14.1 (patched)
-    Java 1.6.0_41
+    Java 1.7.0_21
     Ruby 1.8.6
-    Cyrus SASL 2.1.26
+    Cyrus SASL 2.1.23
     serf 1.2.0
-    sqlite 3.7.16.1
+    sqlite 3.7.17.0
     SWIG 1.3.40
 
 The patched libintl is at
