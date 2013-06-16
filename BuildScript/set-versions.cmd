@@ -1,11 +1,11 @@
 @IF DEFINED NOECHO echo off
 
 echo ====== Set component version environment variables ======
-set VER=1.7.9
+set VER=1.7.10
 set RUBYVER=1.8.6
 set BDBFULLVER=4.8.30
 set SWIGVER=1.3.40
-set JAVAVER=1.6.0_41
+set JAVAVER=1.6.0_45
 set JUNITVER=4.11
 set OPENSSLVER=1.0.1e
 set HTTPDFULLVER=2.2.24
@@ -17,8 +17,8 @@ set APRUTILVER=1.3.12
 set APRICONVVER=1.2.1
 set NEONVER=0.29.6
 set SERFVER=1.2.0
-set ZLIBVER=1.2.7
-set SQLITEVER=3.7.16.1
+set ZLIBVER=1.2.8
+set SQLITEVER=3.7.17.0
 set SQLITEYEAR=2013
 set PCREVER=8.32
 
