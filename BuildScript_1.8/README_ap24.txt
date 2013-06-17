@@ -1,7 +1,7 @@
-This is Subversion for Win32, version 1.7.9. Read the CHANGES file to
+This is Subversion for Win32, version 1.8.0. Read the CHANGES file to
 see what changed in this release:
 
-    http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
+    http://svn.apache.org/repos/asf/subversion/branches/1.8.x/CHANGES
 
 These binaries were built with:
 
@@ -35,7 +35,7 @@ Please read the Subversion INSTALL file for more information:
 
 Package contents:
 
-    svn-win32-1.7.x/
+    svn-win32-1.8.x/
        README.txt           -- This file
        bin/                 -- All Subversion binaries and supporting DLLs,
           *.exe                including APR DLLs
@@ -101,31 +101,9 @@ Package contents:
 For a nice description of setting up Subversion on a server on Windows, see the
 developer edition of the TortoiseSVN Manual, Chapter 3, Setting Up A Server:
 
-   http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html
+    http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html
 
-For an Apache server here's the essentials:
+or the "Version Control with Subversion" book, Chapter 6, Server Configuration:
 
-1. Copy bin/mod_dav_svn.so and bin/mod_authz_svn.so to the Apache modules directory.
-2. Add the Subversion/bin directory to the SYSTEM PATH and reboot so all the Subversion
-   support dll's are visible to the Apache service.
-3. Edit the Apache configuration file (httpd.conf) and make the following changes:
+    http://svnbook.red-bean.com/en/1.8/index.html
 
-  3a. Uncomment the following two lines:
-
-      #LoadModule dav_fs_module modules/mod_dav_fs.so
-      #LoadModule dav_module modules/mod_dav.so
-
-  3b. Add the following two lines to the end of the LoadModule section:
-
-      LoadModule dav_svn_module modules/mod_dav_svn.so
-      LoadModule authz_svn_module modules/mod_authz_svn.so
-
-  3c. Add the following to end of the file. Note: This Location directive is a
-      minimal example with no authentication directives. For other options,
-      especially authentication options, see the Subversion INSTALL file,
-      the Subversion Book, or the TortoiseSVN Manual.
-
-      <Location /svn>
-        DAV svn
-        SVNPath your/repository/path
-      </Location>
