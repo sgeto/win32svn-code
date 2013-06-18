@@ -22,7 +22,6 @@ set LOG_DIR=%SCRIPT_DIR%\log-%VER%-%HTTPDVER%
 rmdir /s /q %LOG_DIR%
 mkdir %LOG_DIR%
 
-::goto TEST
 
 rem ===== Get Sources =====
 call get-svn-source.cmd
@@ -94,8 +93,6 @@ IF ERRORLEVEL 1 GOTO END
 call build-httpd.cmd
 IF ERRORLEVEL 1 GOTO END
 
-:TEST
-
 call build-svn-main.cmd
 IF ERRORLEVEL 1 GOTO END
 
@@ -114,7 +111,7 @@ IF ERRORLEVEL 1 GOTO END
 
 call set-python-ver.cmd 2.7
 IF ERRORLEVEL 1 GOTO END
-call generate-vc-proj.cmd
+call generate-vc-proj.cmd .2.7
 IF ERRORLEVEL 1 GOTO END
 call build-svn-python.cmd
 IF ERRORLEVEL 1 GOTO END
@@ -124,7 +121,7 @@ IF ERRORLEVEL 1 GOTO END
 
 call set-python-ver.cmd 2.6
 IF ERRORLEVEL 1 GOTO END
-call generate-vc-proj.cmd
+call generate-vc-proj.cmd .2.6
 IF ERRORLEVEL 1 GOTO END
 call build-svn-python.cmd
 IF ERRORLEVEL 1 GOTO END
