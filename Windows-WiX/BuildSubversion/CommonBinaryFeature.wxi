@@ -19,7 +19,7 @@
 -->
 <Include>
 				<ComponentRef Id="Intl3_svnDll"/>
-				<ComponentRef Id="Libdb44Dll"/>
+				<ComponentRef Id="Libdb48Dll"/>
 				<ComponentRef Id="Libeay32Dll"/>
 				<ComponentRef Id="Ssleay32Dll"/>
 				<ComponentRef Id="LibsaslDll"/>
