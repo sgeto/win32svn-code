@@ -1,11 +1,11 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5" DefaultTargets="Build">
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{B7895E09-F3EE-4CD0-B5AB-36611B25752E}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Package</OutputType>
     <RootNamespace>BuildSubversion</RootNamespace>
-    <OutputName>Setup-Subversion-1.6.6</OutputName>
+    <OutputName>Setup-Subversion-1.7.10</OutputName>
     <WixToolPath Condition=" '$(WixToolPath)' == '' ">$(SharpDevelopBinPath)\Tools\Wix</WixToolPath>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(WixToolPath)\wix.targets</WixTargetsPath>
     <WixTasksPath Condition=" '$(WixTasksPath)' == '' ">$(WixToolPath)\WixTasks.dll</WixTasksPath>
@@ -70,8 +70,4 @@
     <Folder Include="WixDialog\loc\en-us" />
     <WixLibrary Include="WixDialog\WixUI_Subversion.wixlib" />
   </ItemGroup>
-  <PropertyGroup>
-    <PreBuildEvent>..\..\..\Tools\prepare_distro.bat</PreBuildEvent>
-    <PostBuildEvent>..\..\..\Tools\finish_distro.bat</PostBuildEvent>
-  </PropertyGroup>
 </Project>

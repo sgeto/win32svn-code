@@ -25,7 +25,7 @@
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="\SubversionBuildEnvironment\work\svn-win32-ap22x\licenses\apr\LICENSE" Name="LICENSE.txt" Id="LICENSE22x">
+								<File Source="..\..\..\work\svn-win32-ap22x\licenses\apr\LICENSE" Name="LICENSE.txt" Id="LICENSE22x">
 									<Shortcut Name="APR" Id="aprsct22x" Description="APR License" Directory="LicenseMenuFolder" />
 								</File>
 								<Condition>APACHEVERSION = "Apache22"</Condition>
@@ -35,7 +35,7 @@
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="\SubversionBuildEnvironment\work\svn-win32-ap22x\licenses\apr\NOTICE" Name="NOTICE.txt" Id="NOTICE22x">
+								<File Source="..\..\..\work\svn-win32-ap22x\licenses\apr\NOTICE" Name="NOTICE.txt" Id="NOTICE22x">
 									<Shortcut Name="APR Notice" Id="aprnotsct22x" Description="APR Notice" Directory="LicenseMenuFolder" />
 								</File>
 								<Condition>APACHEVERSION = "Apache22"</Condition>
@@ -47,7 +47,7 @@
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="\SubversionBuildEnvironment\work\svn-win32-ap22x\licenses\apr-iconv\LICENSE" Name="LICENSE.txt" Id="apr_iconv.LICENSE22x">
+								<File Source="..\..\..\work\svn-win32-ap22x\licenses\apr-iconv\LICENSE" Name="LICENSE.txt" Id="apr_iconv.LICENSE22x">
 									<Shortcut Name="APRI-CONV" Id="apriconvsct22x" Description="APR-ICONV License" Directory="LicenseMenuFolder" />
 								</File>
 								<Condition>APACHEVERSION = "Apache22"</Condition>
@@ -57,7 +57,7 @@
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="\SubversionBuildEnvironment\work\svn-win32-ap22x\licenses\apr-iconv\NOTICE" Name="APR-ICONV NOTICE.txt" Id="APRICONVNOTICE22x">
+								<File Source="..\..\..\work\svn-win32-ap22x\licenses\apr-iconv\NOTICE" Name="APR-ICONV NOTICE.txt" Id="APRICONVNOTICE22x">
 									<Shortcut Name="APR-ICONV Notice" Id="apriconvnotsct22x" Description="APR-ICONV Notice" Directory="LicenseMenuFolder" />
 								</File>
 								<Condition>APACHEVERSION = "Apache22"</Condition>
@@ -69,7 +69,7 @@
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="\SubversionBuildEnvironment\work\svn-win32-ap22x\licenses\apr-util\LICENSE" Name="LICENSE.txt" Id="apr_util.LICENSE22x">
+								<File Source="..\..\..\work\svn-win32-ap22x\licenses\apr-util\LICENSE" Name="LICENSE.txt" Id="apr_util.LICENSE22x">
 									<Shortcut Name="APRIUTL" Id="aprutlsct22x" Description="APR-UTIL License" Directory="LicenseMenuFolder" />
 								</File>
 								<Condition>APACHEVERSION = "Apache22"</Condition>
@@ -79,7 +79,7 @@
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="\SubversionBuildEnvironment\work\svn-win32-ap22x\licenses\apr-util\NOTICE" Name="APR-UTIL NOTICE.txt" Id="APRUTILNOTICE22x">
+								<File Source="..\..\..\work\svn-win32-ap22x\licenses\apr-util\NOTICE" Name="APR-UTIL NOTICE.txt" Id="APRUTILNOTICE22x">
 									<Shortcut Name="APR-UTIL Notice" Id="aprutilnotsct22x" Description="APR-UTIL Notice" Directory="LicenseMenuFolder" />
 								</File>
 								<Condition>APACHEVERSION = "Apache22"</Condition>
