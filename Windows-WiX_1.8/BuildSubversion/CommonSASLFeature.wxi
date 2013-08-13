@@ -25,4 +25,6 @@
 				<ComponentRef Id="saslntlm"/>
 				<ComponentRef Id="saslplain"/>
 				<ComponentRef Id="sasldb"/>
+				<ComponentRef Id="saslotp"/>
+				<ComponentRef Id="saslsrp"/>
 </Include>

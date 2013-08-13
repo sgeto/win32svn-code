@@ -18,6 +18,6 @@ rem specific language governing permissions and limitations
 rem under the License.
 rem
 set WIX_PATH=%ProgramFiles%\Windows Installer XML v3.5\bin
-"%WIX_PATH%\candle.exe" -dinfoRtf=${uiextension.wixlib.dir.src}\Pre.rtf -dpostRtf=${uiextension.wixlib.dir.src}\Post.rtf WixUI_Subversion.wxs Infodlg.wxs WelcomeDlgSv.wxs PostDlg.wxs
-"%WIX_PATH%\lit.exe" -out WixUI_Subversion.wixlib WixUI_Subversion.wixobj infodlg.wixobj WelcomeDlgSv.wixobj PostDlg.wixobj
+"%WIX_PATH%\candle.exe" -dinfoRtf=${uiextension.wixlib.dir.src}\Pre.rtf -dpostRtf=${uiextension.wixlib.dir.src}\Post.rtf WixUI_Subversion.wxs Infodlg.wxs ApacheSelectDlg.wxs WelcomeDlgSv.wxs PostDlg.wxs
+"%WIX_PATH%\lit.exe" -out WixUI_Subversion.wixlib WixUI_Subversion.wixobj infodlg.wixobj WelcomeDlgSv.wixobj ApacheSelectDlg.wixobj PostDlg.wixobj
 

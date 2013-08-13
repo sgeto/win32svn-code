@@ -39,4 +39,10 @@
 						<Component Guid="78AE5C63-63E9-4353-88A6-7FA55C10A2A4" Id="sasldb" DiskId="1">
 							<File Source="..\..\..\work\svn-win32-ap22x\bin\saslSASLDB.dll" Name="saslSASLDB.dll" Id="sasldb" />
 						</Component>
+						<Component Guid="1CD57EE0-28C8-4911-82DA-9C5EECA1C604" Id="saslotp" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap22x\bin\saslOTP.dll" Name="saslOTP.dll" Id="saslotp" />
+						</Component>
+						<Component Guid="6A20A0A4-8D12-4B56-A931-D48DF2DB6D4D" Id="saslsrp" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap22x\bin\saslSRP.dll" Name="saslSRP.dll" Id="saslsrp" />
+						</Component>
 </Include>

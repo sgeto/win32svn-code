@@ -19,70 +19,70 @@
 -->
 
 <Include>
-						<Directory Id="bdb" Name="bdb">
-							<Component Guid="F619FBA1-23FF-4529-9E89-73E69DDCCCCA" Id="BdbLICENSE" Shared="no" Permanent="no" DiskId="1">
+						<Directory Id="apr24x" Name="apr">
+							<Component Guid="8DA988BC-98C9-4958-AAEF-896BFED121EE" Id="LICENSE24x" Shared="no" Permanent="no" DiskId="1">
 							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="..\..\..\work\svn-win32-ap22x\licenses\bdb\LICENSE" Name="LICENSE.txt" Id="bdb.LICENSE">
-									<Shortcut Name="BDB" Id="bdbsct" Description="BDB License" Directory="LicenseMenuFolder" />
+								<File Source="..\..\..\work\svn-win32-ap24x\licenses\apr\LICENSE" Name="LICENSE.txt" Id="LICENSE24x">
+									<Shortcut Name="APR" Id="aprsct24x" Description="APR License" Directory="LicenseMenuFolder" />
 								</File>
+								<Condition>APACHEVERSION = "Apache24"</Condition>
+							</Component>
+							<Component Guid="C2C0C3FF-27C1-4670-8DA7-171D64A5FCAF" Id="NOTICE24x" Shared="no" Permanent="no" DiskId="1">
+							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
+								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
+								  <RegistryValue Value="" Type="string" KeyPath="yes" />
+								</RegistryKey>
+								<File Source="..\..\..\work\svn-win32-ap24x\licenses\apr\NOTICE" Name="NOTICE.txt" Id="NOTICE24x">
+									<Shortcut Name="APR Notice" Id="aprnotsct24x" Description="APR Notice" Directory="LicenseMenuFolder" />
+								</File>
+								<Condition>APACHEVERSION = "Apache24"</Condition>
 							</Component>
 						</Directory>
-						<Directory Id="OPENSSL" Name="OPENSSL">
-							<Component Guid="24B6B839-F279-49CA-A5EE-6A0B83DC7AC9" Id="OPENSSLLICENSE" Shared="no" Permanent="no" DiskId="1">
+						<Directory Id="apr_iconv24x" Name="apr-iconv">
+							<Component Guid="AC7F60BC-F533-4485-A2AF-038BF12B9D47" Id="Apr_iconvLICENSE24x" Shared="no" Permanent="no" DiskId="1">
 							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="..\..\..\work\svn-win32-ap22x\licenses\OPENSSL\LICENSE" Name="LICENSE.txt" Id="OPENSSL.LICENSE">
-									<Shortcut Name="OPENSSL" Id="opensslsct" Description="OPENSSL License" Directory="LicenseMenuFolder" />
+								<File Source="..\..\..\work\svn-win32-ap24x\licenses\apr-iconv\LICENSE" Name="LICENSE.txt" Id="apr_iconv.LICENSE24x">
+									<Shortcut Name="APRI-CONV" Id="apriconvsct24x" Description="APR-ICONV License" Directory="LicenseMenuFolder" />
 								</File>
+								<Condition>APACHEVERSION = "Apache24"</Condition>
+							</Component>
+							<Component Guid="F6E8FF81-CD91-4308-A587-9E67FF4CC0AE" Id="APRICONVNOTICE24x" Shared="no" Permanent="no" DiskId="1">
+							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
+								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
+								  <RegistryValue Value="" Type="string" KeyPath="yes" />
+								</RegistryKey>
+								<File Source="..\..\..\work\svn-win32-ap24x\licenses\apr-iconv\NOTICE" Name="APR-ICONV NOTICE.txt" Id="APRICONVNOTICE24x">
+									<Shortcut Name="APR-ICONV Notice" Id="apriconvnotsct24x" Description="APR-ICONV Notice" Directory="LicenseMenuFolder" />
+								</File>
+								<Condition>APACHEVERSION = "Apache24"</Condition>
 							</Component>
 						</Directory>
-						<Directory Id="SVN" Name="SVN">
-							<Component Guid="15384C5A-1FDE-489A-9A5E-51A5C8782FA4" Id="SVNLICENSE" Shared="no" Permanent="no" DiskId="1">
+						<Directory Id="apr_util24x" Name="apr-util">
+							<Component Guid="2A4FDF11-5C8C-4C60-9293-135AC66B1FAF" Id="Apr_utilLICENSE24x" Shared="no" Permanent="no" DiskId="1">
 							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="..\..\..\work\svn-win32-ap22x\licenses\SVN\LICENSE" Name="LICENSE.txt" Id="SVN.LICENSE">
-									<Shortcut Name="Subversion" Id="svnsct" Description="Subversion License" Directory="LicenseMenuFolder" />
+								<File Source="..\..\..\work\svn-win32-ap24x\licenses\apr-util\LICENSE" Name="LICENSE.txt" Id="apr_util.LICENSE24x">
+									<Shortcut Name="APRIUTL" Id="aprutlsct24x" Description="APR-UTIL License" Directory="LicenseMenuFolder" />
 								</File>
+								<Condition>APACHEVERSION = "Apache24"</Condition>
 							</Component>
-						</Directory>
-						<Directory Id="zlib" Name="zlib">
-							<Component Guid="451E1EBC-9E20-4BD7-8321-0D65C4C23A1B" Id="zlREADME" Shared="no" Permanent="no" DiskId="1">
+							<Component Guid="4ABD06D8-D9E3-41FE-8625-8D4C9E77B684" Id="APRUTILNOTICE24x" Shared="no" Permanent="no" DiskId="1">
 							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
 								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
 								  <RegistryValue Value="" Type="string" KeyPath="yes" />
 								</RegistryKey>
-								<File Source="..\..\..\work\svn-win32-ap22x\licenses\zlib\README" Name="README.txt" Id="README">
-									<Shortcut Name="ZLIB" Id="zlibsct" Description="ZLIB License" Directory="LicenseMenuFolder" />
+								<File Source="..\..\..\work\svn-win32-ap24x\licenses\apr-util\NOTICE" Name="APR-UTIL NOTICE.txt" Id="APRUTILNOTICE24x">
+									<Shortcut Name="APR-UTIL Notice" Id="aprutilnotsct24x" Description="APR-UTIL Notice" Directory="LicenseMenuFolder" />
 								</File>
-							</Component>
-						</Directory>
-						<Directory Id="cyrussasl" Name="cyrussasl">
-							<Component Guid="DF72B8AD-9A07-4CCB-BDB1-B317A1FF856A" Id="cyCOPYING" Shared="no" Permanent="no" DiskId="1">
-							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
-								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
-								  <RegistryValue Value="" Type="string" KeyPath="yes" />
-								</RegistryKey>
-								<File Source="..\..\..\work\svn-win32-ap22x\licenses\cyrus-sasl\COPYING" Name="COPYING.txt" Id="COPYING">
-									<Shortcut Name="CYRUSSSL" Id="cysslsct" Description="Cyrus SASL License" Directory="LicenseMenuFolder" />
-								</File>
-							</Component>
-						</Directory>
-						<Directory Id="serf" Name="serf">
-							<Component Guid="B90EADE1-48B6-477F-83AF-FA8347E7A7AB" Id="serLICENSE" Shared="no" Permanent="no" DiskId="1">
-							  	<!-- Registry KeyPath so that we can have un-advertised shortcuts.  The un-advertised shortcuts use system default icons -->
-								<RegistryKey Action="createAndRemoveOnUninstall" Root="HKCU" Key="SOFTWARE\CollabNet\Subversion\Uninstaller">
-								  <RegistryValue Value="" Type="string" KeyPath="yes" />
-								</RegistryKey>
-								<File Source="..\..\..\work\svn-win32-ap22x\licenses\serf\LICENSE" Name="LICENSE.txt" Id="srfLICENSE">
-									<Shortcut Name="SERF" Id="serfsct" Description="Serf License" Directory="LicenseMenuFolder" />
-								</File>
+								<Condition>APACHEVERSION = "Apache24"</Condition>
 							</Component>
 						</Directory>
 </Include>
