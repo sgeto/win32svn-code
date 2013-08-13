@@ -15,16 +15,18 @@ REM This software consists of voluntary contributions made by many
 REM individuals.  For exact contribution history, see the revision
 REM history and logs, available at http://subversion.tigris.org/.
 REM ====================================================================
-SET LIBXML2PATH=..\libxml2\bin
+SET LIBXML2PATH=..\libxml2-2.7.8.win32\bin
 SET BOOKNAME=svn-book
 SET HHC="%ProgramFiles%\HTML Help Workshop\hhc.exe"
-SET DOCBOOKXSL=.\docbook-xsl-1.74.0
+SET DOCBOOKXSL=.\docbook-xsl-1.78.1
 SET SOURCEDIR=.\svn-book
 SET WORK=.\work
 SET BOOKDEST=.\out
 
-svn co http://svnbook.googlecode.com/svn/branches/1.7/en %SOURCEDIR%
-svn co http://svnbook.googlecode.com/svn/branches/1.7/tools .\tools
+::svn co http://svnbook.googlecode.com/svn/branches/1.8/en %SOURCEDIR%
+::svn co http://svnbook.googlecode.com/svn/branches/1.8/tools .\tools
+svn co http://svnbook.googlecode.com/svn/trunk/en %SOURCEDIR%
+svn co http://svnbook.googlecode.com/svn/trunk/tools .\tools
 
 mkdir %WORK%\images
 copy %SOURCEDIR%\book\images\*.* %WORK%\images

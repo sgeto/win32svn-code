@@ -40,9 +40,9 @@
     <String Id="ApacheSelectDlgBannerBitmap" Overridable="no">WixUI_Bmp_Banner</String>
     <String Id="ApacheSelectDlgInstruction" Overridable="no">When you have made your selection, click Next.</String>
     <String Id="ApacheSelectDlgDescription" Overridable="no">If you do not use Apache the following selection will have no effect.</String>
-    <String Id="ApacheSelectDlgTitle" Overridable="no">{\WixUI_Font_Bold}Select Apache Binding</String>
-    <String Id="ApacheSelectDlgRadio1" Overridable="no">Binding for Apache 2.0.x</String>
-    <String Id="ApacheSelectDlgRadio2" Overridable="no">Binding for Apache 2.2.x</String>
+    <String Id="ApacheSelectDlgTitle" Overridable="no">{\WixUI_Font_Bold}Select Apache Version</String>
+    <String Id="ApacheSelectDlgRadio1" Overridable="no">Modules for Apache 2.2.x</String>
+    <String Id="ApacheSelectDlgRadio2" Overridable="no">Modules for Apache 2.4.x</String>
 
     <String Id="PostDlg_Title" Overridable="no">[ProductName] Setup</String>
     <String Id="PostDlgBannerBitmap" Overridable="no">WixUI_Bmp_Banner</String>

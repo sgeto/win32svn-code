@@ -75,6 +75,19 @@
 							<File Source="..\..\..\work\svn-win32-ap22x\bin\mod_dontdothat.so" Name="mod_dontdothat.so" Id="mod_dontdothat.so22x" />
 							<Condition>APACHEVERSION = "Apache22"</Condition>
 						</Component>
+						<Component Guid="2CCAB5D5-9F75-4B0F-92E2-300737B3E195" Id="SvnExe22x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap22x\bin\svn.exe" Name="svn.exe" Id="svn.exe22x" />
+							<Environment 
+								Action="set" 
+								Id="SVNPath22x" 
+								Name="PATH" 
+								Part="last" 
+								System="yes"
+								Permanent="no"
+								Value="[INSTALLDIR]bin"
+							/>
+							<Condition>APACHEVERSION = "Apache22"</Condition>
+						</Component>
 						<Component Guid="7BF975D7-0CE3-49FE-B26D-52CB75B8F95B" Id="SvnadminExe22x" DiskId="1">
 							<File Source="..\..\..\work\svn-win32-ap22x\bin\svnadmin.exe" Name="svnadmin.exe" Id="svnadmin.exe22x" />
 							<Condition>APACHEVERSION = "Apache22"</Condition>
@@ -103,20 +116,16 @@
 							<File Source="..\..\..\work\svn-win32-ap22x\bin\svnmucc.exe" Name="svnmucc.exe" Id="svnmucc.exe22x" />
 							<Condition>APACHEVERSION = "Apache22"</Condition>
 						</Component>
-						<Component Guid="40C123F9-D4A2-4BA1-B2DE-C6CEAA409ED4" Id="Svnpop22x" DiskId="1">
-							<File Source="..\..\..\work\svn-win32-ap22x\bin\svn-populate-node-origins-index.exe" Name="svn-populate-node-origins-index.exe" Id="svnpopulatenodeoriginsindex.exe22x" />
-							<Condition>APACHEVERSION = "Apache22"</Condition>
-						</Component>
-						<Component Guid="BB33C2A9-2BF2-4205-9558-BBF0CC1308FF" Id="Svnrepsharingstats22x" DiskId="1">
-							<File Source="..\..\..\work\svn-win32-ap22x\bin\svn-rep-sharing-stats.exe" Name="svn-rep-sharing-stats.exe" Id="svnrepsharingstats.exe22x" />
-							<Condition>APACHEVERSION = "Apache22"</Condition>
-						</Component>
 						<Component Guid="C7BBC2A1-4928-4DE6-A54B-BA065D935495" Id="Svnauthval22x" DiskId="1">
 							<File Source="..\..\..\work\svn-win32-ap22x\bin\svnauthz-validate.exe" Name="svnauthz-validate.exe" Id="svnauthzvalidate.exe22x" />
 							<Condition>APACHEVERSION = "Apache22"</Condition>
 						</Component>
 						<Component Guid="51CC400A-62F5-4A08-A5DB-84A8F71EB8F2" Id="Svnrdump22x" DiskId="1">
 							<File Source="..\..\..\work\svn-win32-ap22x\bin\svnrdump.exe" Name="svnrdump.exe" Id="svnrdump.exe22x" />
+							<Condition>APACHEVERSION = "Apache22"</Condition>
+						</Component>
+						<Component Guid="188B932C-8DEA-400A-9D95-41C0DF2647AD" Id="SvnauthsExe22x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap22x\bin\svnauthz.exe" Name="svnauthz.exe" Id="svnauthz.exe22x" />
 							<Condition>APACHEVERSION = "Apache22"</Condition>
 						</Component>
 						<Component Guid="34395389-E8B9-42E2-9232-D9CEBEF335A0" Id="READMETxtap22x" Shared="no" Permanent="no" DiskId="1">

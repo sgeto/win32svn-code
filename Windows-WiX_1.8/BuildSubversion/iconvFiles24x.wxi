@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+#    Licensed to the Apache Software Foundation (ASF) under one
+#    or more contributor license agreements.  See the NOTICE file
+#    distributed with this work for additional information
+#    regarding copyright ownership.  The ASF licenses this file
+#    to you under the Apache License, Version 2.0 (the
+#    "License"); you may not use this file except in compliance
+#    with the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing,
+#    software distributed under the License is distributed on an
+#    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#    KIND, either express or implied.  See the License for the
+#    specific language governing permissions and limitations
+#    under the License.
+-->
+<Include>
+						<Component Guid="E901116C-260B-471F-B847-29228DCCDE9B" Id="Adobe_stdencSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\adobe-stdenc.so" Name="adobe-stdenc.so" Id="adobe_stdenc.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="05123f4e-ceed-495b-ba9b-d13b4c601b54" Id="Adobe_symbolSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\adobe-symbol.so" Name="adobe-symbol.so" Id="adobe_symbol.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="FF464468-AAF0-4924-B14D-A0B72322324C" Id="Adobe_zdingbatsSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\adobe-zdingbats.so" Name="adobe-zdingbats.so" Id="adobe_zdingbats.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D27DD45A-0FC8-4BE7-9B79-CF48D2C516D9" Id="Big5So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\big5.so" Name="big5.so" Id="big5.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="8A0672E3-591A-4D24-9EEB-A160632AA20D" Id="Cns11643_plane1So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cns11643-plane1.so" Name="cns11643-plane1.so" Id="cns11643_plane1.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1EE90024-17B7-4F63-AB2F-22E95C327CD6" Id="Cns11643_plane14So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cns11643-plane14.so" Name="cns11643-plane14.so" Id="cns11643_plane14.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E9CD44B1-8F98-4C8C-A619-17206FD026F9" Id="Cns11643_plane2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cns11643-plane2.so" Name="cns11643-plane2.so" Id="cns11643_plane2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="0ECDB5C6-F09D-4397-9F4F-C084463AD78F" Id="Cp037So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp037.so" Name="cp037.so" Id="cp037.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="EC087E5A-1BA0-492A-B325-4739641001E4" Id="Cp038So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp038.so" Name="cp038.so" Id="cp038.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1E3CCFCE-B645-4BE0-876A-DC9B5D926E36" Id="Cp10000So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp10000.so" Name="cp10000.so" Id="cp10000.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="36601023-CD9E-43C9-9073-779685718232" Id="Cp10006So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp10006.so" Name="cp10006.so" Id="cp10006.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="04D68408-283E-4CB8-9EE4-2063D3EC4889" Id="Cp10007So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp10007.so" Name="cp10007.so" Id="cp10007.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7724B8F3-5E3A-49FB-9176-DF5718AED19E" Id="Cp10029So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp10029.so" Name="cp10029.so" Id="cp10029.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="4C909A34-F290-4D16-9337-015B6AB45FE3" Id="Cp1006So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp1006.so" Name="cp1006.so" Id="cp1006.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="44265FEC-E0D6-48F9-87D3-53557821C19E" Id="Cp10079So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp10079.so" Name="cp10079.so" Id="cp10079.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F7E81175-A260-4951-BC6A-9AAA2F42C5EA" Id="Cp10081So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp10081.so" Name="cp10081.so" Id="cp10081.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="C4E74F66-0D92-4438-88C5-B55F2CCCC87D" Id="Cp1026So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp1026.so" Name="cp1026.so" Id="cp1026.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="589AE805-F3C4-4443-9E0A-B42C6FE6C399" Id="Cp273So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp273.so" Name="cp273.so" Id="cp273.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="817B37A5-972A-41B0-9C99-249B8345F525" Id="Cp274So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp274.so" Name="cp274.so" Id="cp274.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3AD1D86E-4EC5-4761-A565-670C8C8C4D09" Id="Cp275So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp275.so" Name="cp275.so" Id="cp275.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="73757C5C-D5F0-4CC3-B236-25660BDA78EB" Id="Cp277So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp277.so" Name="cp277.so" Id="cp277.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="748FC19D-F231-481B-BE8E-47449B59F964" Id="Cp278So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp278.so" Name="cp278.so" Id="cp278.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="10BDE027-C6D4-4385-A32F-21305B99F6B2" Id="Cp280So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp280.so" Name="cp280.so" Id="cp280.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2901299C-DD84-4290-81F9-61A2278E64FA" Id="Cp281So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp281.so" Name="cp281.so" Id="cp281.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F05619A3-2406-4597-B529-7595E3FBB409" Id="Cp284So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp284.so" Name="cp284.so" Id="cp284.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="59E2697C-1C0E-4D78-918F-F4F28EC369C8" Id="Cp285So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp285.so" Name="cp285.so" Id="cp285.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3BE390B8-B0C5-4F53-8366-F3E85A0C9030" Id="Cp290So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp290.so" Name="cp290.so" Id="cp290.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6CB1714F-2D8A-4829-83C9-10AF1251FF96" Id="Cp297So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp297.so" Name="cp297.so" Id="cp297.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="9A8C9955-5E18-4606-8999-333E433E111F" Id="Cp420So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp420.so" Name="cp420.so" Id="cp420.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E422EFB5-2F74-4E54-A77B-95BDCB851EE8" Id="Cp423So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp423.so" Name="cp423.so" Id="cp423.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2087A84B-4117-41A1-9587-2F8E58BFDF76" Id="Cp424So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp424.so" Name="cp424.so" Id="cp424.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="9279778D-C2F7-4877-9AA1-0C9E1E748847" Id="Cp437So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp437.so" Name="cp437.so" Id="cp437.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7740EDC5-681E-4C3C-B475-14622D109074" Id="Cp500So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp500.so" Name="cp500.so" Id="cp500.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="CDAEFFA4-4395-4CC4-9E75-FF62DC11F884" Id="Cp737So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp737.so" Name="cp737.so" Id="cp737.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7A283CAF-610F-45D7-A669-FAB3A731B1AA" Id="Cp775So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp775.so" Name="cp775.so" Id="cp775.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="9AE1403D-D535-454D-A537-C7B33240EE11" Id="Cp850So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp850.so" Name="cp850.so" Id="cp850.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="9E7C1242-DC50-4878-905C-A5714342DADB" Id="Cp851So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp851.so" Name="cp851.so" Id="cp851.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3B7BD03C-0FBD-4C39-97EB-2FAB4A87EF6E" Id="Cp852So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp852.so" Name="cp852.so" Id="cp852.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="BCE14C4C-D2F3-44C6-B3E1-A558D707D8B7" Id="Cp855So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp855.so" Name="cp855.so" Id="cp855.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="036AD67C-7714-4160-910B-1246E26DF01F" Id="Cp856So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp856.so" Name="cp856.so" Id="cp856.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="8FA34409-99F8-4769-BA64-54465E5FDB77" Id="Cp857So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp857.so" Name="cp857.so" Id="cp857.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3BB26CED-29EB-4245-A1EC-CE3A36C0E25B" Id="Cp860So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp860.so" Name="cp860.so" Id="cp860.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6E5FFAE6-4BC6-4A06-818A-17C529E61E50" Id="Cp861So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp861.so" Name="cp861.so" Id="cp861.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2284091B-0CF9-4BEF-94F7-CF94D8BC78FF" Id="Cp862So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp862.so" Name="cp862.so" Id="cp862.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7BA33B33-0193-430A-A6E9-4BFAB896B996" Id="Cp863So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp863.so" Name="cp863.so" Id="cp863.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="42A43972-8E34-4BC1-8014-6B439E038744" Id="Cp864So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp864.so" Name="cp864.so" Id="cp864.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="04FC9644-09D8-4A03-9B06-737CA2BB0D83" Id="Cp865So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp865.so" Name="cp865.so" Id="cp865.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2107E61D-3C54-4E10-B047-45FED4B5AE60" Id="Cp866So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp866.so" Name="cp866.so" Id="cp866.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="4EC4A868-1EFE-4A30-BC4E-84539A1AF42D" Id="Cp868So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp868.so" Name="cp868.so" Id="cp868.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="CCF3E701-45D5-4268-9C3F-B2BFD0FEF262" Id="Cp869So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp869.so" Name="cp869.so" Id="cp869.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F0F710D7-AE67-4739-83A8-704D50168D24" Id="Cp870So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp870.so" Name="cp870.so" Id="cp870.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="77960220-5665-469F-BA95-3A85AE28EA4F" Id="Cp871So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp871.so" Name="cp871.so" Id="cp871.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="06AAFB79-F266-4967-A73B-3388BF039914" Id="Cp874So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp874.so" Name="cp874.so" Id="cp874.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="347DBAAD-DF74-4CD0-91B0-29091AE0AEA6" Id="Cp875So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp875.so" Name="cp875.so" Id="cp875.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="486F403C-08B5-44DB-8707-BAA7300E957C" Id="Cp880So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp880.so" Name="cp880.so" Id="cp880.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5F6D6B1A-B2CB-456E-B633-54C7037CE126" Id="Cp891So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp891.so" Name="cp891.so" Id="cp891.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6B870D2D-4853-4477-89EB-B0E781EC1758" Id="Cp903So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp903.so" Name="cp903.so" Id="cp903.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="30F6A90C-7705-4E1A-9B59-10AD6A3D33F0" Id="Cp904So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp904.so" Name="cp904.so" Id="cp904.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E546B45F-7F3E-435A-BE17-59EDDF6C2B8B" Id="Cp905So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp905.so" Name="cp905.so" Id="cp905.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E8096F8C-D3DA-401E-87CF-806ED2CBCA28" Id="Cp918So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp918.so" Name="cp918.so" Id="cp918.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F815B993-BBB1-4EBA-8124-EF50B0D5AB52" Id="Cp932So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp932.so" Name="cp932.so" Id="cp932.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="264F99A6-D4B6-4650-980F-87A1282513B2" Id="Cp936So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp936.so" Name="cp936.so" Id="cp936.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="49E8A013-EDE7-46CE-A50A-D3376C1D46D2" Id="Cp949So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp949.so" Name="cp949.so" Id="cp949.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2592C312-B299-45C9-A16A-842EB715C06E" Id="Cp950So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\cp950.so" Name="cp950.so" Id="cp950.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="259AB885-76BC-41C6-967E-3815048D1228" Id="Dec_mcsSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\dec-mcs.so" Name="dec-mcs.so" Id="dec_mcs.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="BA230CE3-97F4-472C-AB2C-AE83BB22D6A6" Id="Ebcdic_at_de_aSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-at-de-a.so" Name="ebcdic-at-de-a.so" Id="ebcdic_at_de_a.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="C5A3E69E-6635-433B-8811-354B554418B0" Id="Ebcdic_at_deSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-at-de.so" Name="ebcdic-at-de.so" Id="ebcdic_at_de.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="59C2B98C-75D6-4B82-AC75-A3020B21641E" Id="Ebcdic_ca_frSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-ca-fr.so" Name="ebcdic-ca-fr.so" Id="ebcdic_ca_fr.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="73982FF9-D9B5-462B-8F3D-B181DFB16BC2" Id="Ebcdic_dk_no_aSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-dk-no-a.so" Name="ebcdic-dk-no-a.so" Id="ebcdic_dk_no_a.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="822C8913-5F5E-4F79-A41D-E45374A16330" Id="Ebcdic_dk_noSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-dk-no.so" Name="ebcdic-dk-no.so" Id="ebcdic_dk_no.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F8160AE4-5ED6-45F0-8C33-27383706B198" Id="Ebcdic_es_aSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-es-a.so" Name="ebcdic-es-a.so" Id="ebcdic_es_a.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E0187A91-97E8-4AF8-A800-2CDACC2E8F86" Id="Ebcdic_es_sSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-es-s.so" Name="ebcdic-es-s.so" Id="ebcdic_es_s.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="A524F787-1CB5-48E0-AA3C-8BF1F9602698" Id="Ebcdic_esSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-es.so" Name="ebcdic-es.so" Id="ebcdic_es.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6438F382-2812-46C0-831F-F363DA0200FD" Id="Ebcdic_fi_se_aSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-fi-se-a.so" Name="ebcdic-fi-se-a.so" Id="ebcdic_fi_se_a.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E145886F-0FC7-427C-B628-2812EC46C0CD" Id="Ebcdic_fi_seSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-fi-se.so" Name="ebcdic-fi-se.so" Id="ebcdic_fi_se.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="A601D606-32FE-4950-AC97-32E3ADC7F347" Id="Ebcdic_frSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-fr.so" Name="ebcdic-fr.so" Id="ebcdic_fr.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F7B1AD1E-748C-491F-8169-F7EEA361B8D9" Id="Ebcdic_itSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-it.so" Name="ebcdic-it.so" Id="ebcdic_it.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="4E81529C-FFFF-41A8-8517-EBC95728EDD8" Id="Ebcdic_ptSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-pt.so" Name="ebcdic-pt.so" Id="ebcdic_pt.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="798E61DB-0571-43DE-B6EB-DFAE27453A32" Id="Ebcdic_ukSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-uk.so" Name="ebcdic-uk.so" Id="ebcdic_uk.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="BA6BAFC2-07AE-4DBE-9636-FEAD3AF9BD6E" Id="Ebcdic_usSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ebcdic-us.so" Name="ebcdic-us.so" Id="ebcdic_us.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D694D282-D68F-48DE-BFC7-585D4EB40132" Id="Euc_jpSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\euc-jp.so" Name="euc-jp.so" Id="euc_jp.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="16E773C6-5C5D-4E43-BCC1-E20FA1AF3CC2" Id="Euc_krSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\euc-kr.so" Name="euc-kr.so" Id="euc_kr.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="96CFF9F8-E166-4428-931F-8E85E75C8DFE" Id="Euc_twSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\euc-tw.so" Name="euc-tw.so" Id="euc_tw.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D2C3B36C-B873-4E64-AEE0-519D38220307" Id="Gb12345So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\gb12345.so" Name="gb12345.so" Id="gb12345.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="34B18BB3-44D4-438E-B5F4-A47A1695DE2F" Id="Gb2312So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\gb2312.so" Name="gb2312.so" Id="gb2312.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="A2D16F38-7D0F-413B-B4AA-B0D65EB69C48" Id="Gb_2312_80So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\gb_2312-80.so" Name="gb_2312-80.so" Id="gb_2312_80.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="DDDEDD83-C319-4935-AF4B-BB8E7C245A0F" Id="Hp_roman8So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\hp-roman8.so" Name="hp-roman8.so" Id="hp_roman8.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D67376FB-5A21-4793-A5A1-FD5C11E27E68" Id="Iso_10646_ucs_2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-10646-ucs-2.so" Name="iso-10646-ucs-2.so" Id="iso_10646_ucs_2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="BC527526-6233-4C7E-8F03-513F459048C0" Id="Iso_10646_ucs_4So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-10646-ucs-4.so" Name="iso-10646-ucs-4.so" Id="iso_10646_ucs_4.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D3D582FD-C344-4DDA-B49B-CF869A7E158B" Id="Iso_2022_cnSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-2022-cn.so" Name="iso-2022-cn.so" Id="iso_2022_cn.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="AC5149F8-65A4-40DE-89B3-EE75574DA3F8" Id="Iso_2022_jp_2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-2022-jp-2.so" Name="iso-2022-jp-2.so" Id="iso_2022_jp_2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="80852AE7-D2E0-4E5B-9A5C-20D526277C4F" Id="Iso_2022_jpSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-2022-jp.so" Name="iso-2022-jp.so" Id="iso_2022_jp.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="21BFEB5E-BDD9-486B-80AE-6352CAF1C5DE" Id="Iso_2022_krSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-2022-kr.so" Name="iso-2022-kr.so" Id="iso_2022_kr.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F373A155-94EF-47E9-B13F-EACD9CBD819D" Id="Iso_8859_1So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-1.so" Name="iso-8859-1.so" Id="iso_8859_1.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B5BEE29F-809B-4081-8CAA-300DB986E2F4" Id="Iso_8859_10So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-10.so" Name="iso-8859-10.so" Id="iso_8859_10.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D65F3F21-41A4-4169-B393-BFCF9A583E40" Id="Iso_8859_13So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-13.so" Name="iso-8859-13.so" Id="iso_8859_13.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D00B0B66-ED1B-4FF9-8C8F-879710E50F29" Id="Iso_8859_14So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-14.so" Name="iso-8859-14.so" Id="iso_8859_14.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="232DD078-4160-47F1-A651-0FB148199116" Id="Iso_8859_15So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-15.so" Name="iso-8859-15.so" Id="iso_8859_15.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1F4F6199-618E-440F-84AC-A80CDDEEE0F1" Id="Iso_8859_2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-2.so" Name="iso-8859-2.so" Id="iso_8859_2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="BDB27EFC-8B72-464A-8221-28EC57A66B77" Id="Iso_8859_3So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-3.so" Name="iso-8859-3.so" Id="iso_8859_3.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D06FCC9F-FF7C-40F3-B2A1-46B2717D5F2C" Id="Iso_8859_4So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-4.so" Name="iso-8859-4.so" Id="iso_8859_4.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="97A63A0E-5761-431D-AE17-4B30894AC2CE" Id="Iso_8859_5So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-5.so" Name="iso-8859-5.so" Id="iso_8859_5.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="69D718EE-9241-4DF5-B9FB-740B2A606625" Id="Iso_8859_6So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-6.so" Name="iso-8859-6.so" Id="iso_8859_6.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="34786B12-209F-4B1C-9CEC-ADE6F1789F35" Id="Iso_8859_7So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-7.so" Name="iso-8859-7.so" Id="iso_8859_7.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D9A86981-8C6B-428E-8B23-050E8FF3700A" Id="Iso_8859_8So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-8.so" Name="iso-8859-8.so" Id="iso_8859_8.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B9464B55-68E5-4149-B1D5-682C9163312A" Id="Iso_8859_9So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-8859-9.so" Name="iso-8859-9.so" Id="iso_8859_9.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E79B51BB-9C5B-49B1-8A33-A453D5609610" Id="Iso_ir_10So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-10.so" Name="iso-ir-10.so" Id="iso_ir_10.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="A587D690-2F85-469A-A648-6FD15442A6C1" Id="Iso_ir_102So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-102.so" Name="iso-ir-102.so" Id="iso_ir_102.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="19019D13-3EAD-44D7-8BC0-578B9FF34025" Id="Iso_ir_103So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-103.so" Name="iso-ir-103.so" Id="iso_ir_103.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D8199E98-3EEA-42AA-AFD1-8DF1A95459C7" Id="Iso_ir_11So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-11.so" Name="iso-ir-11.so" Id="iso_ir_11.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3B30F623-DBB2-464A-A74A-B1432F442E65" Id="Iso_ir_111So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-111.so" Name="iso-ir-111.so" Id="iso_ir_111.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="981A93CD-CB97-499F-B470-2039A862926F" Id="Iso_ir_121So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-121.so" Name="iso-ir-121.so" Id="iso_ir_121.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6F27EB60-E398-484A-BE49-08277C1ECF2F" Id="Iso_ir_122So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-122.so" Name="iso-ir-122.so" Id="iso_ir_122.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="14235C27-A864-4DA3-B0A2-7FE28A51CFF4" Id="Iso_ir_123So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-123.so" Name="iso-ir-123.so" Id="iso_ir_123.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="428014F9-762F-4B42-9F4C-0945A97C6509" Id="Iso_ir_128So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-128.so" Name="iso-ir-128.so" Id="iso_ir_128.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D4D50038-8732-4B8A-B0B9-D134629C62FA" Id="Iso_ir_13So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-13.so" Name="iso-ir-13.so" Id="iso_ir_13.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="FED56D32-F60D-46B5-A770-9DFB0C68F2AB" Id="Iso_ir_139So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-139.so" Name="iso-ir-139.so" Id="iso_ir_139.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="AA1374A0-8E7F-4729-B780-53304B667EB8" Id="Iso_ir_14So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-14.so" Name="iso-ir-14.so" Id="iso_ir_14.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="8C1BAAC7-A0B2-43F5-B72C-706A4BDD9F45" Id="Iso_ir_141So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-141.so" Name="iso-ir-141.so" Id="iso_ir_141.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="025FAB2B-D0E3-4757-B8BA-184C47C51E81" Id="Iso_ir_142So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-142.so" Name="iso-ir-142.so" Id="iso_ir_142.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="33312B4C-B8A8-48BD-A5C3-26418E85CF5A" Id="Iso_ir_143So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-143.so" Name="iso-ir-143.so" Id="iso_ir_143.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E193E215-02C7-44E5-B7AC-B920D0D84DC8" Id="Iso_ir_146So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-146.so" Name="iso-ir-146.so" Id="iso_ir_146.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="AE11D5A9-D172-4798-96FB-AC1617ED1331" Id="Iso_ir_147So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-147.so" Name="iso-ir-147.so" Id="iso_ir_147.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="EA77FE0D-1430-4894-ACB5-565A7D93ED9F" Id="Iso_ir_15So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-15.so" Name="iso-ir-15.so" Id="iso_ir_15.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="9854EE5E-5CDC-476C-BEEB-4F12815CEA68" Id="Iso_ir_150So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-150.so" Name="iso-ir-150.so" Id="iso_ir_150.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B54DCE4E-8288-41AA-9047-68DC5770B9F8" Id="Iso_ir_151So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-151.so" Name="iso-ir-151.so" Id="iso_ir_151.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="36DFB441-10DF-46D9-A797-97EB3C848219" Id="Iso_ir_152So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-152.so" Name="iso-ir-152.so" Id="iso_ir_152.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="C2C810FC-E100-47EA-8CC9-5777A763514E" Id="Iso_ir_153So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-153.so" Name="iso-ir-153.so" Id="iso_ir_153.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F166FA36-2227-45B3-804E-37470314BC40" Id="Iso_ir_154So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-154.so" Name="iso-ir-154.so" Id="iso_ir_154.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="086FDEA4-0EC8-419B-8790-8B5DCA3447A4" Id="Iso_ir_155So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-155.so" Name="iso-ir-155.so" Id="iso_ir_155.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D7117A34-BB04-4731-ABBA-8D8D588C7428" Id="Iso_ir_158So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-158.so" Name="iso-ir-158.so" Id="iso_ir_158.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6BB1FAE7-1C3F-4C4B-B994-6522E5A75085" Id="Iso_ir_16So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-16.so" Name="iso-ir-16.so" Id="iso_ir_16.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3653744C-6368-4659-872B-CE1ADB1D39C9" Id="Iso_ir_17So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-17.so" Name="iso-ir-17.so" Id="iso_ir_17.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5A7101E8-6A0D-479A-987E-B15ADF9CDF8E" Id="Iso_ir_18So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-18.so" Name="iso-ir-18.so" Id="iso_ir_18.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="4DCBA12B-B78C-4912-9B88-E317951DFBDF" Id="Iso_ir_19So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-19.so" Name="iso-ir-19.so" Id="iso_ir_19.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2CA32894-B574-4D9E-896D-95C073F0D59D" Id="Iso_ir_2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-2.so" Name="iso-ir-2.so" Id="iso_ir_2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="DC184CFF-0533-4266-AAAC-D57092E764E6" Id="Iso_ir_21So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-21.so" Name="iso-ir-21.so" Id="iso_ir_21.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="C7E06441-5DBF-4E6B-AEAB-8F367A6BE69A" Id="Iso_ir_25So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-25.so" Name="iso-ir-25.so" Id="iso_ir_25.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="FB743765-A0E1-4392-A2A5-833C5969A1FA" Id="Iso_ir_27So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-27.so" Name="iso-ir-27.so" Id="iso_ir_27.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="43315566-9D74-4EDC-80FF-A213BFE9A50D" Id="Iso_ir_37So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-37.so" Name="iso-ir-37.so" Id="iso_ir_37.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="0D36C812-D864-47A1-A955-3EC0D6C8E465" Id="Iso_ir_4So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-4.so" Name="iso-ir-4.so" Id="iso_ir_4.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="28349403-3631-4A97-838B-899433293A90" Id="Iso_ir_47So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-47.so" Name="iso-ir-47.so" Id="iso_ir_47.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="072280C7-9F02-49DA-A228-D278696C805B" Id="Iso_ir_49So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-49.so" Name="iso-ir-49.so" Id="iso_ir_49.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="66BAB3AE-D5CC-4CF5-8852-E555BE02661F" Id="Iso_ir_50So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-50.so" Name="iso-ir-50.so" Id="iso_ir_50.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="374769D6-3C86-4BC5-8329-BC2885B7D0FA" Id="Iso_ir_51So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-51.so" Name="iso-ir-51.so" Id="iso_ir_51.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5EE634A5-5846-4BF6-A7CE-9ACDAA9DEEF1" Id="Iso_ir_54So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-54.so" Name="iso-ir-54.so" Id="iso_ir_54.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="EEE68E78-9655-47E0-82F1-5622F3702F74" Id="Iso_ir_55So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-55.so" Name="iso-ir-55.so" Id="iso_ir_55.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D89F4C12-C38E-4897-B6E7-308586A39850" Id="Iso_ir_57So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-57.so" Name="iso-ir-57.so" Id="iso_ir_57.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="A486702E-1EE3-41E1-9552-F60F5940886C" Id="Iso_ir_60So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-60.so" Name="iso-ir-60.so" Id="iso_ir_60.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7A58360D-6458-4CAE-831A-23D29C7021A7" Id="Iso_ir_61So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-61.so" Name="iso-ir-61.so" Id="iso_ir_61.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1E7B729A-4229-4059-8741-94B0241E5280" Id="Iso_ir_69So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-69.so" Name="iso-ir-69.so" Id="iso_ir_69.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="E78F05B7-3D06-4ECD-A944-A3E78E03BE54" Id="Iso_ir_70So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-70.so" Name="iso-ir-70.so" Id="iso_ir_70.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7BD0EDD7-B0FB-49F1-8945-5DBDC989772A" Id="Iso_ir_8_1So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-8-1.so" Name="iso-ir-8-1.so" Id="iso_ir_8_1.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="68FFCA5D-0FD7-4D3E-A50F-A4584249A931" Id="Iso_ir_8_2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-8-2.so" Name="iso-ir-8-2.so" Id="iso_ir_8_2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="35A14315-39F3-4A5A-B1BB-7329C2C6EE0E" Id="Iso_ir_84So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-84.so" Name="iso-ir-84.so" Id="iso_ir_84.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="AB0CDF73-036F-42CF-9496-1C6544598FE9" Id="Iso_ir_85So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-85.so" Name="iso-ir-85.so" Id="iso_ir_85.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6141724F-9BFC-4505-B436-14680E9B504A" Id="Iso_ir_86So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-86.so" Name="iso-ir-86.so" Id="iso_ir_86.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="150152AD-363C-4171-B08B-195936B2BEC0" Id="Iso_ir_88So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-88.so" Name="iso-ir-88.so" Id="iso_ir_88.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="AA69CF58-D187-4A76-A4C0-763F2815ACC3" Id="Iso_ir_89So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-89.so" Name="iso-ir-89.so" Id="iso_ir_89.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="0C58DDB0-64F6-4952-BC11-515E60D2A763" Id="Iso_ir_9_1So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-9-1.so" Name="iso-ir-9-1.so" Id="iso_ir_9_1.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B6D78888-CF46-45D1-8B81-7B34B87F3945" Id="Iso_ir_9_2So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-9-2.so" Name="iso-ir-9-2.so" Id="iso_ir_9_2.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="9723AE70-2064-4DAD-9187-E801C3B66261" Id="Iso_ir_90So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-90.so" Name="iso-ir-90.so" Id="iso_ir_90.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B27BF54F-F064-41C9-80BB-D820283D448B" Id="Iso_ir_91So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-91.so" Name="iso-ir-91.so" Id="iso_ir_91.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7D63F43D-0A4A-4A40-8C1B-DB8B533A8C7A" Id="Iso_ir_92So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-92.so" Name="iso-ir-92.so" Id="iso_ir_92.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="8C11565F-8FFB-4704-887F-7B0E502FBD11" Id="Iso_ir_93So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-93.so" Name="iso-ir-93.so" Id="iso_ir_93.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="16441040-9803-48D9-906C-B39FC806E2DE" Id="Iso_ir_94So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-94.so" Name="iso-ir-94.so" Id="iso_ir_94.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="27974BAD-A2FE-4FB6-81DC-73F3EE36A2F0" Id="Iso_ir_95So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-95.so" Name="iso-ir-95.so" Id="iso_ir_95.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5B7897AF-7083-4AB9-A489-622ECD03482F" Id="Iso_ir_96So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-96.so" Name="iso-ir-96.so" Id="iso_ir_96.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5182384B-EA3B-4C04-BA25-6D6DA315B98F" Id="Iso_ir_98So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-98.so" Name="iso-ir-98.so" Id="iso_ir_98.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3EE5C30F-37AF-4558-B1C5-6910351EDB3A" Id="Iso_ir_99So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso-ir-99.so" Name="iso-ir-99.so" Id="iso_ir_99.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1AFA00C2-8493-481E-9636-4B0949FF162F" Id="Iso646_dkSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso646-dk.so" Name="iso646-dk.so" Id="iso646_dk.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="89898444-D53A-46FE-8619-5492142F3E6E" Id="Iso646_krSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\iso646-kr.so" Name="iso646-kr.so" Id="iso646_kr.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6D690840-45D6-421A-9B54-03D1360352CA" Id="Jis_x0201So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\jis_x0201.so" Name="jis_x0201.so" Id="jis_x0201.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="89BCBF3F-C73E-4950-81E1-CF29A09C6D54" Id="Jis_x0208_1983So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\jis_x0208-1983.so" Name="jis_x0208-1983.so" Id="jis_x0208_1983.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="AE0F0EA0-3B13-4F66-8D11-DB2F6ED2B57C" Id="Jis_x0212_1990So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\jis_x0212-1990.so" Name="jis_x0212-1990.so" Id="jis_x0212_1990.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="A55404A5-8CF5-42CF-9D23-FD84333F14E3" Id="JohabSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\johab.so" Name="johab.so" Id="johab.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="89F967C0-D6F2-4ECD-9362-194F0D5FB7C3" Id="Koi8_rSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\koi8-r.so" Name="koi8-r.so" Id="koi8_r.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5CE100A3-5A21-4DB4-BFDB-F929E7609AD5" Id="Koi8_ruSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\koi8-ru.so" Name="koi8-ru.so" Id="koi8_ru.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5BDDA888-0049-4713-8C14-9060C57048F3" Id="Koi8_uSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\koi8-u.so" Name="koi8-u.so" Id="koi8_u.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5A3BAED6-FBD1-45D5-B98A-AF6729C9524C" Id="Ksx1001So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ksx1001.so" Name="ksx1001.so" Id="ksx1001.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="018A7996-63A0-4094-BCA3-C50846A51495" Id="Mac_ceSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-ce.so" Name="mac-ce.so" Id="mac_ce.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="94FB913D-BAC7-4EC9-A4A1-5D08E2B863B7" Id="Mac_croatianSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-croatian.so" Name="mac-croatian.so" Id="mac_croatian.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1E80C16E-E282-41D4-9E86-80D783627FE2" Id="Mac_cyrillicSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-cyrillic.so" Name="mac-cyrillic.so" Id="mac_cyrillic.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="731E337D-B761-49B9-BBF8-163B708412AD" Id="Mac_dingbatsSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-dingbats.so" Name="mac-dingbats.so" Id="mac_dingbats.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="698F0EC0-F803-40E9-A911-021C76574080" Id="Mac_greekSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-greek.so" Name="mac-greek.so" Id="mac_greek.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3519780D-3285-474A-8863-3EAEEF886103" Id="Mac_icelandSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-iceland.so" Name="mac-iceland.so" Id="mac_iceland.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7BF9C752-18AF-4BB7-BBF7-BA9BB084D10E" Id="Mac_japanSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-japan.so" Name="mac-japan.so" Id="mac_japan.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="4BE3AA38-917E-452D-8775-3E12A978D370" Id="Mac_romanSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-roman.so" Name="mac-roman.so" Id="mac_roman.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="C7DCBF89-77A8-4F80-A73C-D34EE3426B79" Id="Mac_romaniaSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-romania.so" Name="mac-romania.so" Id="mac_romania.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="963E232F-EAB0-4178-88F4-45CFF57596E7" Id="Mac_thaiSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-thai.so" Name="mac-thai.so" Id="mac_thai.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="36CBBFDF-6156-4DA9-A060-577EF5A53068" Id="Mac_turkishSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-turkish.so" Name="mac-turkish.so" Id="mac_turkish.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B4BC63B1-AB51-40E0-8141-EC7B16132A73" Id="Mac_ukraineSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\mac-ukraine.so" Name="mac-ukraine.so" Id="mac_ukraine.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="CE9C173C-8849-4F55-B705-B324A21B3A41" Id="MacintoshSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\macintosh.so" Name="macintosh.so" Id="macintosh.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="1BE3FBB8-7CDB-488B-86F1-D07903958921" Id="Osd_ebcdic_df04_1So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\osd_ebcdic_df04_1.so" Name="osd_ebcdic_df04_1.so" Id="osd_ebcdic_df04_1.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3742DDF8-DAFD-47B3-9E09-E040D0D9EAE4" Id="Osd_ebcdic_df04_15So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\osd_ebcdic_df04_15.so" Name="osd_ebcdic_df04_15.so" Id="osd_ebcdic_df04_15.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="3CBFE5A2-BA7A-414E-A353-A4021E3DD6C0" Id="Shift_jisSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\shift_jis.so" Name="shift_jis.so" Id="shift_jis.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="896EDAC4-047E-4799-AD58-D14F322738D5" Id="Ucs2_internalSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ucs2-internal.so" Name="ucs2-internal.so" Id="ucs2_internal.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="BCCB0205-2400-42C0-9926-D52E707F64A7" Id="Ucs4_internalSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\ucs4-internal.so" Name="ucs4-internal.so" Id="ucs4_internal.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="ED665B92-0FD0-49B0-B7AB-5FB9503B80B0" Id="Unicode_1_1_utf_7So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\unicode-1-1-utf-7.so" Name="unicode-1-1-utf-7.so" Id="unicode_1_1_utf_7.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="98A2FD92-D675-4EAF-8301-6680E5979A2D" Id="Us_asciiSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\us-ascii.so" Name="us-ascii.so" Id="us_ascii.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="F089C972-93F6-4F13-BBEB-6CA21B39F4A4" Id="Utf_16So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\utf-16.so" Name="utf-16.so" Id="utf_16.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="40C2B531-546F-4716-9843-FCBE5EA2D161" Id="Utf_8So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\utf-8.so" Name="utf-8.so" Id="utf_8.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="5DF39F2F-E28A-476A-9D03-0106A773E23B" Id="Windows_1250So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1250.so" Name="windows-1250.so" Id="windows_1250.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="08F1372C-E60A-4409-8929-DD9137B55583" Id="Windows_1251So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1251.so" Name="windows-1251.so" Id="windows_1251.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="B4C92C86-FEEF-495A-9463-845E08FCE655" Id="Windows_1252So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1252.so" Name="windows-1252.so" Id="windows_1252.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D8A0650E-6690-4E82-B35A-932CA5A9E432" Id="Windows_1253So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1253.so" Name="windows-1253.so" Id="windows_1253.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="2C846CC5-F52D-4756-9E48-4CEDCB0365C0" Id="Windows_1254So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1254.so" Name="windows-1254.so" Id="windows_1254.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="D99A7B2D-843C-4146-86C4-480D79659005" Id="Windows_1255So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1255.so" Name="windows-1255.so" Id="windows_1255.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="7FF81605-8339-45DB-861D-F9B34C3884E5" Id="Windows_1256So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1256.so" Name="windows-1256.so" Id="windows_1256.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="6AC389C5-1DFC-4BC2-850C-8AF841ED33E2" Id="Windows_1257So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1257.so" Name="windows-1257.so" Id="windows_1257.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="4538A4DC-A95B-4526-8BE6-CA95F54CBD0C" Id="Windows_1258So24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\windows-1258.so" Name="windows-1258.so" Id="windows_1258.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+						<Component Guid="C95065F3-59E6-48FF-A295-BB4B3AB8882F" Id="_tbl_simpleSo24x" DiskId="1">
+							<File Source="..\..\..\work\svn-win32-ap24x\iconv\_tbl_simple.so" Name="_tbl_simple.so" Id="_tbl_simple.so24x" />
+							<Condition>APACHEVERSION = "Apache24"</Condition>
+						</Component>
+</Include>

@@ -24,10 +24,12 @@
 					<Directory Id="bin" Name="bin">
 						<?include CommonBinaryFiles.wxi ?>
 						<?include ApacheFiles22x.wxi ?>
+						<?include ApacheFiles24x.wxi ?>
 						<?include CommonSASLFiles.wxi ?>
 					</Directory>
 					<Directory Id="iconv" Name="iconv">
 						<?include iconvFiles22x.wxi ?>
+						<?include iconvFiles24x.wxi ?>
 					</Directory>
 					<Directory Id="share" Name="share">
 						<?include CommonShareFiles.wxi ?>
@@ -35,6 +37,7 @@
 					<Directory Id="licenses" Name="licenses">
 						<?include LicensesCommon.wxi ?>
 						<?include Licenses22x.wxi ?>
+						<?include Licenses24x.wxi ?>
 					</Directory>					
 				</Directory>
 			</Directory>
