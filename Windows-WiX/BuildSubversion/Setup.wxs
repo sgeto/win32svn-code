@@ -35,9 +35,9 @@
 --><Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<!-- only add new defines at the END of this list, do not change the order -->
 	<?define RTMProductVersion="1.0.0" ?>
-  	<?define ProductVersion="1.7.10" ?> <!-- index 2 in XPath PI - change for upgrade -->
-	<?define RevisionNumber="r1485473" ?> <!-- index 3 in XPath PI - change for upgrade -->
-	<?define ProductCode="{1be2157d-dff0-478a-a998-6b4a2eb9cd5b}" ?> <!-- index 4 in XPath PI - change for upgrade -->
+  	<?define ProductVersion="1.7.11" ?> <!-- index 2 in XPath PI - change for upgrade -->
+	<?define RevisionNumber="r1503997" ?> <!-- index 3 in XPath PI - change for upgrade -->
+	<?define ProductCode="{362fd2ed-a57b-438e-8836-76528701c266}" ?> <!-- index 4 in XPath PI - change for upgrade -->
 	<?define UpgradeCode="{032A49B2-32FB-4AE0-BAB0-6AB953CC94DA}" ?> <!-- leave this value -->
 	<?define PackageCode="*" ?>
 
@@ -105,7 +105,7 @@
 		</InstallUISequence>
 
 		<!-- add/remove programs icon -->
-		<Icon Id="Subversion.ico" SourceFile="..\..\..\build\win32\svn.ico" />
+		<Icon Id="Subversion.ico" SourceFile="..\Bitmaps\svn.ico" />
 		<Property Id="ARPPRODUCTICON" Value="Subversion.ico" />
 
 		<Property Id="ARPHELPLINK">http://subversion.tigris.org</Property>
