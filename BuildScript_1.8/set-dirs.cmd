@@ -4,7 +4,7 @@ echo ====== Set directories environment variables ======
 
 set DIR=src-%VER%
 set DRIVE=C
-set ROOT=%DRIVE%:\SVN-%VER%-%HTTPDVER%
+set ROOT=%DRIVE%:\Win32Svn\SVN-%VER%-%HTTPDVER%
 set DLDIR=%ROOT%\Download
 set PERLDIR=C:\Perl
 set RUBYDIR=C:\Ruby%RUBYFILEVER%

@@ -21,6 +21,7 @@ echo ----- Test bdb ------ > %LOG_DIR%\run-tests-bdb.log
 python win-tests.py -c -r -v -f bdb >> %LOG_DIR%\run-tests-bdb.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
+:svn
 echo ----- Test svn ------
 echo ----- Test svn ------ >> %LOG_DIR%\run-tests.log
 echo ----- Logging tests to run-tests-svn.log ------ >> %LOG_DIR%\run-tests.log
@@ -31,6 +32,7 @@ python win-tests.py -c -r -v -u svn://localhost >> %LOG_DIR%\run-tests-svn.log 2
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 %SYSINTERNALS%\pskill.exe -t svnserve.exe
 
+:httpd
 echo ----- Test http-serf ------
 echo ----- Test http-serf ------ >> %LOG_DIR%\run-tests.log
 echo ----- Logging tests to run-tests-http-serf.log ------ >> %LOG_DIR%\run-tests.log
@@ -42,6 +44,8 @@ IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 PATH=%PATHORG%
 popd
+echo ----- Tests OK ------
+echo ----- Tests OK ------ >> %LOG_DIR%\run-tests.log
 exit /B 0
 
 :TEST_FAIL
