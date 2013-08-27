@@ -17,14 +17,7 @@ ren %ROOT%\%HTTPDDIR%\srclib\pcre-%PCREVER% pcre >> %LOG_DIR%\get-pcre-source.lo
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 
-rem copy config.h.generic config.h
-%AWKDIR%\awk.exe "{gsub(/#define HAVE_DIRENT_H 1/,\"/*#define HAVE_DIRENT_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.generic > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp1 2>> %LOG_DIR%\get-pcre-source.log 
-IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
-%AWKDIR%\awk.exe "{gsub(/#define HAVE_STDINT_H 1/,\"/*#define HAVE_STDINT_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp1 > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp2 2>> %LOG_DIR%\get-pcre-source.log 
-IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
-%AWKDIR%\awk.exe "{gsub(/#define HAVE_INTTYPES_H 1/,\"/*#define HAVE_INTTYPES_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp2 > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp3 2>> %LOG_DIR%\get-pcre-source.log 
-IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
-%AWKDIR%\awk.exe "{gsub(/#define HAVE_UNISTD_H 1/,\"/*#define HAVE_UNISTD_H 1*/\") };1" %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.tmp3 > %ROOT%\%HTTPDDIR%\srclib\pcre\config.h 2>> %LOG_DIR%\get-pcre-source.log 
+copy /y  %ROOT%\%HTTPDDIR%\srclib\pcre\config.h.generic  %ROOT%\%HTTPDDIR%\srclib\pcre\config.h >> %LOG_DIR%\get-pcre-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 
 copy /y  %ROOT%\%HTTPDDIR%\srclib\pcre\pcre.h.generic  %ROOT%\%HTTPDDIR%\srclib\pcre\pcre.h >> %LOG_DIR%\get-pcre-source.log 2>>&1
