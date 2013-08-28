@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.7.11. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.13. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
@@ -8,13 +8,13 @@ These binaries were built with:
     APR 1.4.8
     APR-util 1.5.2
     APR-ICONV 1.2.1
-    Neon 0.29.6
+    Neon 0.30.0
     Berkeley DB 4.8.30
     OpenSSL 1.0.1e
     ZLib 1.2.8
     Apache 2.4.6
-    PCRE 8.32
-    Python 2.5.4 , 2.6.6 and 2.7.3 (2.5.6 and 2.6.8 is source only releases)
+    PCRE 8.33
+    Python 2.5.4 , 2.6.6 and 2.7.5 (2.5.6 and 2.6.8 is source only releases)
     Perl 5.16.3 (ActivePerl)
     libintl 0.14.1 (patched)
     Java 1.6.0_45
