@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.8.1. Read the CHANGES file to
+This is Subversion for Win32, version 1.8.3. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.8.x/CHANGES
