@@ -5,7 +5,7 @@ echo ====== Generate VC projects ====== > %LOG_DIR%\generate-vc-proj%1.log
 
 pushd %ROOT%\%DIR%
 IF ERRORLEVEL 1 GOTO DIR_FAIL
-python gen-make.py -t dsp --with-httpd=..\%HTTPDDIR% --with-berkeley-db=%BDBDIR% --with-openssl=..\%HTTPDDIR%\srclib\openssl --with-zlib=..\%HTTPDDIR%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITJAR% >> %LOG_DIR%\generate-vc-proj%1.log 2>>&1
+python gen-make.py -t dsp --with-httpd=..\%HTTPDDIR% --with-berkeley-db=%BDBDIR% --with-openssl=..\%HTTPDDIR%\srclib\openssl --with-zlib=..\%HTTPDDIR%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITJAR% >> %LOG_DIR%\generate-vc-proj%1.log 2>>&1
 IF ERRORLEVEL 1 GOTO GENERATE_FAIL
 popd
 
