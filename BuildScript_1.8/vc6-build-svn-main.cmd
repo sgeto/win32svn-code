@@ -93,6 +93,9 @@ IF ERRORLEVEL 1 GOTO END
 call build-httpd.cmd
 IF ERRORLEVEL 1 GOTO END
 
+call build-serf.cmd
+IF ERRORLEVEL 1 GOTO END
+
 call build-svn-main.cmd
 IF ERRORLEVEL 1 GOTO END
 

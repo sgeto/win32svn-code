@@ -22,7 +22,7 @@ IF ERRORLEVEL 1 GOTO COPY_FAIL
 
 rem ====== Regenerate VC project files - make_dist doesn't like junit-dir
 cd %ROOT%\%DIR%
-python gen-make.py -t dsp --with-httpd=..\%HTTPDDIR% --with-berkeley-db=%BDBDIR% --with-openssl=..\%HTTPDDIR%\srclib\openssl --with-zlib=..\%HTTPDDIR%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\%DIR%\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITDIR%  >> %LOG_DIR%\create-zip.%PYTHONVER%.log 2>>&1
+python gen-make.py -t dsp --with-httpd=..\%HTTPDDIR% --with-berkeley-db=%BDBDIR% --with-openssl=..\%HTTPDDIR%\srclib\openssl --with-zlib=..\%HTTPDDIR%\srclib\zlib --with-sasl=..\cyrus-sasl-%SASLVER% --enable-nls --with-libintl=..\svn-win32-libintl --with-serf=..\serf --with-swig=%SWIGDIR% --enable-bdb-in-apr-util --with-junit=%JUNITDIR%  >> %LOG_DIR%\create-zip.%PYTHONVER%.log 2>>&1
 IF ERRORLEVEL 1 GOTO GENMAKE_FAIL
 
 cd %ROOT%
