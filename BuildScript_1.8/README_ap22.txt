@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.8.4. Read the CHANGES file to
+This is Subversion for Win32, version 1.8.5. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.8.x/CHANGES
@@ -13,7 +13,7 @@ These binaries were built with:
     ZLib 1.2.8
     Apache 2.2.25
 	
-    Python 2.6.6 and 2.7.5 (2.6.8 is source only release)
+    Python 2.6.6 and 2.7.6 (2.6.9 is source only release)
     Perl 5.16.3 (ActivePerl)
     libintl 0.14.1 (patched)
     Java 1.7.0_45
