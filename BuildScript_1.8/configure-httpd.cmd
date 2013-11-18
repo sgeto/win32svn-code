@@ -9,6 +9,8 @@ IF EXIST "%HTTPDINSTDIR%\conf\httpd.conf.in" goto PATCH
 copy "%HTTPDINSTDIR%\conf\httpd.conf" "%HTTPDINSTDIR%\conf\httpd.conf.in" >> %LOG_DIR%\configure-httpd.log 2>>&1
 IF ERRORLEVEL 1 GOTO COPY_FAIL
 
+copy /-Y "%ROOT%\%DIR%\tools\xslt\*.*" "%HTTPDINSTDIR%\htdocs\" >> %LOG_DIR%\configure-httpd.log 2>>&1
+
 
 :PATCH
 copy "%HTTPDINSTDIR%\conf\httpd.conf.in" "%HTTPDINSTDIR%\conf\httpd.conf" >> %LOG_DIR%\configure-httpd.log 2>>&1
@@ -31,6 +33,7 @@ echo  AuthType Basic>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  AuthName "Subversion Repository">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  AuthUserFile "%HTTPDINSTDIR%/conf/users">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  Require valid-user>> "%HTTPDINSTDIR%\conf\httpd.conf"
+echo  SVNIndexXSLT "/svnindex.xsl">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo ^</Location^>>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo(>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo ^<Location /svn-test-work/local_tmp/repos^>>> "%HTTPDINSTDIR%\conf\httpd.conf"
@@ -41,6 +44,7 @@ echo  AuthType Basic>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  AuthName "Subversion Repository">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  AuthUserFile "%HTTPDINSTDIR%/conf/users">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  Require valid-user>> "%HTTPDINSTDIR%\conf\httpd.conf"
+echo  SVNIndexXSLT "/svnindex.xsl">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo ^</Location^>>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo(>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo RedirectMatch permanent ^^/svn-test-work/repositories/REDIRECT-PERM-(.*)$ /svn-test-work/repositories/$1>> "%HTTPDINSTDIR%\conf\httpd.conf"
@@ -54,6 +58,7 @@ echo  AuthType Basic>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  AuthName "Subversion Repository">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  AuthUserFile "C:/TestSVN/users">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo  Require valid-user>> "%HTTPDINSTDIR%\conf\httpd.conf"
+echo  SVNIndexXSLT "/svnindex.xsl">> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo ^</Location^>>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo(>> "%HTTPDINSTDIR%\conf\httpd.conf"
 echo CustomLog "logs/svn.log" "%%t %%u %%{SVN-ACTION}e" env=SVN-ACTION>> "%HTTPDINSTDIR%\conf\httpd.conf"
