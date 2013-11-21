@@ -6,7 +6,8 @@ pushd %ROOT%\%HTTPDDIR%\srclib\zlib
 IF ERRORLEVEL 1 GOTO DIR_FAIL
 
 echo ----- Build -----
-nmake -f win32\Makefile.msc LOC="-DASMV -DASMINF" OBJA="inffas32.obj match686.obj" >> %LOG_DIR%\build-zlib.log 2>>&1
+::nmake -f win32\Makefile.msc LOC="-DASMV -DASMINF" OBJA="inffas32.obj match686.obj" >> %LOG_DIR%\build-zlib.log 2>>&1
+nmake -f win32\Makefile.msc >> %LOG_DIR%\build-zlib.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
 echo ----- Test -----
