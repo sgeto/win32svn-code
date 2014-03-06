@@ -21,7 +21,7 @@ echo ----- Test svn ------
 echo ----- Test svn ------ >> %LOG_DIR%\run-tests.log
 netsh firewall add allowedprogram "%ROOT%\%DIR%\Release\subversion\svnserve\svnserve.exe" svnserve-%VER%-%HTTPDVER% >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
-python win-tests.py -c -r -v -u svn://localhost >> %LOG_DIR%\run-tests.log 2>>&1
+python win-tests.py -c -r -v -u svn://127.0.0.1 >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 %SYSINTERNALS%\pskill.exe -t svnserve.exe
 
@@ -29,12 +29,12 @@ IF ERRORLEVEL 1 GOTO TEST_FAIL
 start "HTTPD" "%HTTPDINSTDIR%\bin\httpd.exe"
 echo ----- Test http-neon ------
 echo ----- Test http-neon ------ >> %LOG_DIR%\run-tests.log
-python win-tests.py -c -r -v -u http://localhost:80%HTTPDVER% --http-library=neon >> %LOG_DIR%\run-tests.log 2>>&1
+python win-tests.py -c -r -v -u http://127.0.0.1:80%HTTPDVER% --http-library=neon >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 echo ----- Test http-serf ------
 echo ----- Test http-serf ------ >> %LOG_DIR%\run-tests.log
-python win-tests.py -c -r -v -u http://localhost:80%HTTPDVER% --http-library=serf >> %LOG_DIR%\run-tests.log 2>>&1
+python win-tests.py -c -r -v -u http://127.0.0.1:80%HTTPDVER% --http-library=serf >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 PATH=%PATHORG%
