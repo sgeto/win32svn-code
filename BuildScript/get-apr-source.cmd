@@ -14,13 +14,20 @@ echo ====== Patch apr ======
 echo ====== Patch apr ====== >> %LOG_DIR%\get-apr-source.log
 rem patch APR for Win2k
 del %ROOT%\%HTTPDDIR%\srclib\apr\include\apr.hw.in >> %LOG_DIR%\get-apr-source.log 2>>&1
+del %ROOT%\%HTTPDDIR%\srclib\apr\include\apr.hw.1 >> %LOG_DIR%\get-apr-source.log 2>>&1
 ren %ROOT%\%HTTPDDIR%\srclib\apr\include\apr.hw apr.hw.in >> %LOG_DIR%\get-apr-source.log 2>>&1
 %AWKDIR%\awk.exe "{gsub(/<ws2tcpip.h>/,\"^<ws2tcpip.h^>\n#include ^<wspiapi.h^>\") };1" %ROOT%\%HTTPDDIR%\srclib\apr\include\apr.hw.in > %ROOT%\%HTTPDDIR%\srclib\apr\include\apr.hw 2>> %LOG_DIR%\get-apr-source.log
 IF ERRORLEVEL 1 GOTO PATCH_FAIL
+
 rem patch srclib\apr-util\dbd\apr_dbd_odbc.c with 'typedef INT32 SQLLEN;' and 'typedef UINT32 SQLULEN;'  på rad 50
 del %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c.in >> %LOG_DIR%\get-apr-source.log 2>>&1
 ren %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c apr_dbd_odbc.c.in >> %LOG_DIR%\get-apr-source.log 2>>&1
-%AWKDIR%\awk.exe "{gsub(/\/\* Driver name/,\"\ntypedef INT32 SQLLEN;\ntypedef UINT32 SQLULEN;\n\/* Driver name\") };1" %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c.in > %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c 2>> %LOG_DIR%\get-apr-source.log
+%AWKDIR%\awk.exe "{gsub(/\/\* Driver name/,\"\ntypedef INT32 SQLLEN;\ntypedef UINT32 SQLULEN;\n\/* Driver name\") };1" %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c.in > %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c.1 2>> %LOG_DIR%\get-apr-source.log
+IF ERRORLEVEL 1 GOTO PATCH_FAIL
+
+rem patch srclib\apr-util\dbd\apr_dbd_odbc.c with 'intptr_t' replaced as 'int'
+%AWKDIR%\awk.exe "{gsub(/intptr_t/,\"int\") };1" %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c.1 > %ROOT%\%HTTPDDIR%\srclib\apr-util\dbd\apr_dbd_odbc.c 2>> %LOG_DIR%\get-apr-source.log
+IF ERRORLEVEL 1 GOTO PATCH_FAIL
 
 exit /B 0
 
