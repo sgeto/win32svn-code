@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.7.16. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.16-1. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
@@ -10,7 +10,7 @@ These binaries were built with:
     APR-ICONV 1.2.1
     Neon 0.30.0
     Berkeley DB 4.8.30
-    OpenSSL 1.0.1f
+    OpenSSL 1.0.1g
     ZLib 1.2.8
     Apache 2.2.26
 	
