@@ -1,11 +1,11 @@
-This is Subversion for Win32, version 1.7.16-1. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.17. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
 
 These binaries were built with:
 
-    APR 1.5.0
+    APR 1.5.1
     APR-util 1.5.3
     APR-ICONV 1.2.1
     Neon 0.30.0
@@ -20,7 +20,7 @@ These binaries were built with:
     Java 1.6.0_45
     Ruby 1.8.6
     Cyrus SASL 2.1.23
-    serf 1.3.4
+    serf 1.2.1
     sqlite 3.8.3.1
     SWIG 1.3.40
 
