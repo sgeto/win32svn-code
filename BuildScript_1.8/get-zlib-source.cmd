@@ -10,6 +10,7 @@ echo ====== Extract zlib ====== >> %LOG_DIR%\get-zlib-source.log
 %ZZIP% x -y %DLDIR%\zlib%ZLIBFILEVER%.zip -o%ROOT%\%HTTPDDIR%\srclib\ >> %LOG_DIR%\get-zlib-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 rmdir /Q /S %ROOT%\%HTTPDDIR%\srclib\zlib >> %LOG_DIR%\get-zlib-source.log 2>>&1
+IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 ren %ROOT%\%HTTPDDIR%\srclib\zlib-%ZLIBVER% zlib >> %LOG_DIR%\get-zlib-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 
