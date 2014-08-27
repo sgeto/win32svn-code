@@ -22,6 +22,7 @@ set LOG_DIR=%SCRIPT_DIR%\log-%VER%-%HTTPDVER%
 rmdir /s /q %LOG_DIR%
 mkdir %LOG_DIR%
 
+::goto TEST
 
 rem ===== Get Sources =====
 call get-svn-source.cmd
@@ -142,6 +143,7 @@ IF ERRORLEVEL 1 GOTO END
 call configure-httpd.cmd
 IF ERRORLEVEL 1 GOTO END
 
+:TEST
 
 call run-tests.cmd
 IF ERRORLEVEL 1 GOTO END
