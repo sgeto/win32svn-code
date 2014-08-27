@@ -1,0 +1,83 @@
+Index: dbd/apr_dbd_odbc.c
+===================================================================
+--- dbd/apr_dbd_odbc.c	(revision 1620290)
++++ dbd/apr_dbd_odbc.c	(working copy)
+@@ -47,6 +47,9 @@
+ #include <odbc/sqlext.h>
+ #endif
+ 
++
++typedef INT32 SQLLEN;
++typedef UINT32 SQLULEN;
+ /* Driver name is "odbc" and the entry point is 'apr_dbd_odbc_driver' 
+  * unless ODBC_DRIVER_NAME is defined and it is linked with another db library which
+  * is ODBC source-compatible. e.g. DB2, Informix, TimesTen, mysql.  
+@@ -114,9 +117,9 @@
+     char lastError[MAX_ERROR_STRING];
+     int defaultBufferSize;      /* used for CLOBs in text mode, 
+                                  * and when fld size is indeterminate */
+-    intptr_t transaction_mode;
+-    intptr_t dboptions;         /* driver options re SQLGetData */
+-    intptr_t default_transaction_mode;
++    int transaction_mode;
++    int dboptions;         /* driver options re SQLGetData */
++    int default_transaction_mode;
+     int can_commit;             /* controls end_trans behavior */
+ };
+ 
+@@ -359,7 +362,7 @@
+                                         SQLHANDLE stmt)
+ {
+     SQLRETURN rc;
+-    intptr_t maxsize, textsize, realsize, type, isunsigned = 1;
++    int maxsize, textsize, realsize, type, isunsigned = 1;
+ 
+     /* discover the sql type */
+     rc = SQLColAttribute(stmt, icol + 1, SQL_DESC_UNSIGNED, NULL, 0, NULL,
+@@ -747,7 +750,7 @@
+     SQLRETURN rc;
+     SQLLEN indicator;
+     int state = row->res->colstate[col];
+-    intptr_t options = row->res->apr_dbd->dboptions;
++    int options = row->res->apr_dbd->dboptions;
+ 
+     switch (state) {
+     case (COL_UNAVAIL):
+@@ -817,13 +820,13 @@
+                                int *connect, SQLCHAR **datasource, 
+                                SQLCHAR **user, SQLCHAR **password, 
+                                int *defaultBufferSize, int *nattrs,
+-                               int **attrs, intptr_t **attrvals)
++                               int **attrs, int **attrvals)
+ {
+     char *seps, *last, *next, *name[MAX_PARAMS], *val[MAX_PARAMS];
+     int nparams = 0, i, j;
+ 
+     *attrs = apr_pcalloc(pool, MAX_PARAMS * sizeof(char *));
+-    *attrvals = apr_pcalloc(pool, MAX_PARAMS * sizeof(intptr_t));
++    *attrvals = apr_pcalloc(pool, MAX_PARAMS * sizeof(int));
+     *nattrs = 0;
+     seps = DEFAULTSEPS;
+     name[nparams] = apr_strtok(apr_pstrdup(pool, params), seps, &last);
+@@ -1063,7 +1066,7 @@
+     SQLCHAR  *datasource = (SQLCHAR *)"", *user = (SQLCHAR *)"",
+              *password = (SQLCHAR *)"";
+     int nattrs = 0, *attrs = NULL,  connect = 0;
+-    intptr_t *attrvals = NULL;
++    int *attrvals = NULL;
+ 
+     err_step = "SQLAllocHandle (SQL_HANDLE_DBC)";
+     err_htype = SQL_HANDLE_ENV;
+@@ -1117,10 +1120,10 @@
+         handle->default_transaction_mode = 0;
+         handle->can_commit = APR_DBD_TRANSACTION_IGNORE_ERRORS;
+         SQLGetInfo(hdbc, SQL_DEFAULT_TXN_ISOLATION,
+-                   &(handle->default_transaction_mode), sizeof(intptr_t), NULL);
++                   &(handle->default_transaction_mode), sizeof(int), NULL);
+         handle->transaction_mode = handle->default_transaction_mode;
+         SQLGetInfo(hdbc, SQL_GETDATA_EXTENSIONS ,&(handle->dboptions),
+-                   sizeof(intptr_t), NULL);
++                   sizeof(int), NULL);
+         apr_pool_cleanup_register(pool, handle, odbc_close_cleanup, apr_pool_cleanup_null);
+         return handle;
+     }

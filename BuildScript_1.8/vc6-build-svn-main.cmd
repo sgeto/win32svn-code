@@ -23,6 +23,8 @@ rmdir /s /q %LOG_DIR%
 mkdir %LOG_DIR%
 
 
+goto TEST
+
 rem ===== Get Sources =====
 call get-svn-source.cmd
 IF ERRORLEVEL 1 GOTO END
@@ -131,6 +133,8 @@ IF ERRORLEVEL 1 GOTO END
 call create-zip.cmd
 IF ERRORLEVEL 1 GOTO END
 
+
+:TEST
 
 call configure-httpd.cmd
 IF ERRORLEVEL 1 GOTO END

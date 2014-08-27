@@ -1,5 +1,5 @@
-@IF DEFINED NOECHO echo off
 
+@IF DEFINED NOECHO echo off
 echo ====== Get httpd Source code ======
 echo ====== Get httpd Source code ====== > %LOG_DIR%\get-httpd-source.log
 %SVNBINPATH%\svn co https://svn.apache.org/repos/asf/httpd/httpd/tags/%HTTPDFULLVER% %ROOT%\%HTTPDDIR% >> %LOG_DIR%\get-httpd-source.log 2>>&1
@@ -7,14 +7,21 @@ IF ERRORLEVEL 1 GOTO CO_FAIL
 
 echo ====== Patch httpd ======
 echo ====== Patch httpd ====== >> %LOG_DIR%\get-httpd-source.log
-IF NOT %HTTPDVER%==22 GOTO SKIP_PATCH
-rem remove references to openssl\store.h in mod_ssl\mod_ssl.dep
-del %ROOT%\%HTTPDDIR%\modules\ssl\mod_ssl.dep.in >> %LOG_DIR%\get-httpd-source.log 2>>&1
-ren %ROOT%\%HTTPDDIR%\modules\ssl\mod_ssl.dep mod_ssl.dep.in >> %LOG_DIR%\get-httpd-source.log 2>>&1
-%AWKDIR%\awk.exe "!/store.h/" %ROOT%\%HTTPDDIR%\modules\ssl\mod_ssl.dep.in > %ROOT%\%HTTPDDIR%\modules\ssl\mod_ssl.dep 2>> %LOG_DIR%\get-httpd-source.log
+
+IF NOT %HTTPDVER%==22 GOTO SKIP_PATCH_22
+echo ====== Patch httpd 2.2 ======
+echo ====== Patch httpd 2.2 ====== >> %LOG_DIR%\get-httpd-source.log
+%SVNBINPATH%\svn patch %SCRIPT_DIR%\httpd_22.patch %ROOT%\%HTTPDDIR% >> %LOG_DIR%\get-httpd-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO PATCH_FAIL
 
-:SKIP_PATCH
+:SKIP_PATCH_22
+IF NOT %HTTPDVER%==24 GOTO SKIP_PATCH_24
+echo ====== Patch httpd 2.4 ======
+echo ====== Patch httpd 2.4 ====== >> %LOG_DIR%\get-httpd-source.log
+%SVNBINPATH%\svn patch %SCRIPT_DIR%\httpd_24.patch %ROOT%\%HTTPDDIR% >> %LOG_DIR%\get-httpd-source.log 2>>&1
+IF ERRORLEVEL 1 GOTO PATCH_FAIL
+
+:SKIP_PATCH_24
 
 exit /B 0
 

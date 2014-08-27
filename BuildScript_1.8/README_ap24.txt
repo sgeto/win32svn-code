@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.8.9-1. Read the CHANGES file to
+This is Subversion for Win32, version 1.8.10. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.8.x/CHANGES
@@ -9,18 +9,18 @@ These binaries were built with:
     APR-util 1.5.3
     APR-ICONV 1.2.1
     Berkeley DB 4.8.30
-    OpenSSL 1.0.1h
+    OpenSSL 1.0.1i
     ZLib 1.2.8
-    Apache 2.4.8
-    PCRE 8.34
-    Python 2.6.6 and 2.7.6 (2.6.9 is source only release)
+    Apache 2.4.10
+    PCRE 8.35
+    Python 2.6.6 and 2.7.8 (2.6.9 is source only release)
     Perl 5.16.3 (ActivePerl)
     libintl 0.14.1 (patched)
-    Java 1.7.0_55
+    Java 1.7.0_67
     Ruby 1.8.6
     Cyrus SASL 2.1.23
-    serf 1.3.5
-    sqlite 3.8.4.3
+    serf 1.3.7
+    sqlite 3.8.6.0
     SWIG 1.3.40
 
 The patched libintl is at
