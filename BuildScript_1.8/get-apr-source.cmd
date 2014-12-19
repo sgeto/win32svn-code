@@ -9,12 +9,6 @@ IF ERRORLEVEL 1 GOTO CO_FAIL
 %SVNBINPATH%\svn co https://svn.apache.org/repos/asf/apr/apr-iconv/tags/%APRICONVVER% %ROOT%\%HTTPDDIR%\srclib\apr-iconv >> %LOG_DIR%\get-apr-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO CO_FAIL
 
-
-echo ====== Patch apr ======
-echo ====== Patch apr ====== >> %LOG_DIR%\get-apr-source.log
-%SVNBINPATH%\svn patch %SCRIPT_DIR%\apr.patch %ROOT%\%HTTPDDIR%\srclib\apr >> %LOG_DIR%\get-apr-source.log 2>>&1
-IF ERRORLEVEL 1 GOTO PATCH_FAIL
-
 echo ====== Patch apr-util ======
 echo ====== Patch apr-util ====== >> %LOG_DIR%\get-apr-source.log
 %SVNBINPATH%\svn patch %SCRIPT_DIR%\apr-util.patch %ROOT%\%HTTPDDIR%\srclib\apr-util >> %LOG_DIR%\get-apr-source.log 2>>&1

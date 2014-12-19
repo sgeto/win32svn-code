@@ -1,8 +1,8 @@
 Index: build/win32/make_dist.py
 ===================================================================
---- build/win32/make_dist.py	(revision 1481742)
+--- build/win32/make_dist.py	(revision 1644580)
 +++ build/win32/make_dist.py	(working copy)
-@@ -213,20 +213,24 @@
+@@ -213,14 +213,16 @@
                       File('%(blddir)s/svnrdump/svnrdump.pdb'),
                       File('%(blddir)s/svnmucc/svnmucc.exe'),
                       File('%(blddir)s/svnmucc/svnmucc.pdb'),
@@ -23,6 +23,7 @@ Index: build/win32/make_dist.py
                       File('%(blddir)s/../tools/dev/svnraisetreeconflict/svnraisetreeconflict.exe'),
                       File('%(blddir)s/../tools/dev/svnraisetreeconflict/svnraisetreeconflict.pdb'),
                       File('%(blddir)s/mod_dav_svn/mod_dav_svn.so'),
+@@ -227,6 +229,8 @@
                       File('%(blddir)s/mod_dav_svn/mod_dav_svn.pdb'),
                       File('%(blddir)s/mod_authz_svn/mod_authz_svn.so'),
                       File('%(blddir)s/mod_authz_svn/mod_authz_svn.pdb'),
@@ -70,7 +71,7 @@ Index: build/win32/make_dist.py
  
 Index: subversion/bindings/javahl/native/DiffOptions.cpp
 ===================================================================
---- subversion/bindings/javahl/native/DiffOptions.cpp	(revision 1481742)
+--- subversion/bindings/javahl/native/DiffOptions.cpp	(revision 1644580)
 +++ subversion/bindings/javahl/native/DiffOptions.cpp	(working copy)
 @@ -26,6 +26,12 @@
  
@@ -87,7 +88,7 @@ Index: subversion/bindings/javahl/native/DiffOptions.cpp
  {
 Index: subversion/bindings/javahl/native/DiffOptions.h
 ===================================================================
---- subversion/bindings/javahl/native/DiffOptions.h	(revision 1481742)
+--- subversion/bindings/javahl/native/DiffOptions.h	(revision 1644580)
 +++ subversion/bindings/javahl/native/DiffOptions.h	(working copy)
 @@ -45,11 +45,11 @@
    }
@@ -108,9 +109,9 @@ Index: subversion/bindings/javahl/native/DiffOptions.h
  };
 Index: subversion/bindings/swig/include/apr.swg
 ===================================================================
---- subversion/bindings/swig/include/apr.swg	(revision 1481742)
+--- subversion/bindings/swig/include/apr.swg	(revision 1644580)
 +++ subversion/bindings/swig/include/apr.swg	(working copy)
-@@ -24,37 +24,37 @@
+@@ -24,13 +24,13 @@
   */
  
  /* -----------------------------------------------------------------------
@@ -127,6 +128,7 @@ Index: subversion/bindings/swig/include/apr.swg
      char temp[256];
      sprintf(temp, "%" APR_INT64_T_FMT, (apr_int64_t) $1);
      ST(argvi) = sv_newmortal();
+@@ -37,7 +37,7 @@
      sv_setpv((SV*)ST(argvi++), temp);
  }
  
@@ -135,6 +137,7 @@ Index: subversion/bindings/swig/include/apr.swg
      char temp[256];
      sprintf(temp, "%" APR_UINT64_T_FMT, (apr_uint64_t) $1);
      ST(argvi) = sv_newmortal();
+@@ -44,17 +44,17 @@
      sv_setpv((SV*)ST(argvi++), temp);
  }
  
@@ -174,7 +177,7 @@ Index: subversion/bindings/swig/include/apr.swg
     apr_time_t
 Index: subversion/bindings/swig/include/svn_types.swg
 ===================================================================
---- subversion/bindings/swig/include/svn_types.swg	(revision 1481742)
+--- subversion/bindings/swig/include/svn_types.swg	(revision 1644580)
 +++ subversion/bindings/swig/include/svn_types.swg	(working copy)
 @@ -252,7 +252,11 @@
    enum svn_wc_merge_outcome_t *
@@ -190,7 +193,7 @@ Index: subversion/bindings/swig/include/svn_types.swg
     Generic macros for callback typemaps
 Index: subversion/libsvn_subr/cache.c
 ===================================================================
---- subversion/libsvn_subr/cache.c	(revision 1481742)
+--- subversion/libsvn_subr/cache.c	(revision 1644580)
 +++ subversion/libsvn_subr/cache.c	(working copy)
 @@ -226,14 +226,14 @@
    enum { _1MB = 1024 * 1024 };
@@ -217,7 +220,7 @@ Index: subversion/libsvn_subr/cache.c
  
 Index: subversion/libsvn_subr/sysinfo.c
 ===================================================================
---- subversion/libsvn_subr/sysinfo.c	(revision 1481742)
+--- subversion/libsvn_subr/sysinfo.c	(revision 1644580)
 +++ subversion/libsvn_subr/sysinfo.c	(working copy)
 @@ -28,6 +28,7 @@
  #define PSAPI_VERSION 1
@@ -229,9 +232,9 @@ Index: subversion/libsvn_subr/sysinfo.c
  
 Index: subversion/tests/libsvn_fs/fs-test.c
 ===================================================================
---- subversion/tests/libsvn_fs/fs-test.c	(revision 1481742)
+--- subversion/tests/libsvn_fs/fs-test.c	(revision 1644580)
 +++ subversion/tests/libsvn_fs/fs-test.c	(working copy)
-@@ -3545,7 +3545,7 @@
+@@ -3546,7 +3546,7 @@
    apr_uint32_t r = svn_test_rand(seed);
    return (int)(((double)r
                  / ((double)TEST_RAND_MAX+1.0))
@@ -242,7 +245,7 @@ Index: subversion/tests/libsvn_fs/fs-test.c
  
 Index: subversion/tests/libsvn_subr/named_atomic-test-common.h
 ===================================================================
---- subversion/tests/libsvn_subr/named_atomic-test-common.h	(revision 1481742)
+--- subversion/tests/libsvn_subr/named_atomic-test-common.h	(revision 1644580)
 +++ subversion/tests/libsvn_subr/named_atomic-test-common.h	(working copy)
 @@ -34,7 +34,8 @@
  #define ATOMIC_NAME "MyTestAtomic"
@@ -256,7 +259,7 @@ Index: subversion/tests/libsvn_subr/named_atomic-test-common.h
  const char *name_namespace = NULL;
 Index: subversion/tests/libsvn_subr/string-test.c
 ===================================================================
---- subversion/tests/libsvn_subr/string-test.c	(revision 1481742)
+--- subversion/tests/libsvn_subr/string-test.c	(revision 1644580)
 +++ subversion/tests/libsvn_subr/string-test.c	(working copy)
 @@ -521,19 +521,19 @@
    SVN_TEST_ASSERT(length == 1);
