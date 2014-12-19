@@ -1,0 +1,14 @@
+Index: dbd/apr_dbd_odbc.c
+===================================================================
+--- dbd/apr_dbd_odbc.c	(revision 1620290)
++++ dbd/apr_dbd_odbc.c	(working copy)
+@@ -47,6 +47,9 @@
+ #include <odbc/sqlext.h>
+ #endif
+ 
++
++typedef INT32 SQLLEN;
++typedef UINT32 SQLULEN;
+ /* Driver name is "odbc" and the entry point is 'apr_dbd_odbc_driver' 
+  * unless ODBC_DRIVER_NAME is defined and it is linked with another db library which
+  * is ODBC source-compatible. e.g. DB2, Informix, TimesTen, mysql.  
