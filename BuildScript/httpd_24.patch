@@ -1,0 +1,12 @@
+Index: modules/cache/mod_socache_shmcb.c
+===================================================================
+--- modules/cache/mod_socache_shmcb.c	(revision 1646271)
++++ modules/cache/mod_socache_shmcb.c	(working copy)
+@@ -13,6 +13,7 @@
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  */
++#include <limits.h>
+ 
+ #include "httpd.h"
+ #include "http_log.h"

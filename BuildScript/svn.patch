@@ -1,6 +1,6 @@
 Index: build/generator/templates/build_locale.ezt
 ===================================================================
---- build/generator/templates/build_locale.ezt	(revision 1337070)
+--- build/generator/templates/build_locale.ezt	(revision 1646395)
 +++ build/generator/templates/build_locale.ezt	(working copy)
 @@ -18,7 +18,7 @@
  
@@ -13,7 +13,7 @@ Index: build/generator/templates/build_locale.ezt
  [for pofiles]echo Running msgfmt on [pofiles.po]...
 Index: build/win32/make_dist.py
 ===================================================================
---- build/win32/make_dist.py	(revision 1337070)
+--- build/win32/make_dist.py	(revision 1646395)
 +++ build/win32/make_dist.py	(working copy)
 @@ -211,14 +211,16 @@
                       File('%(blddir)s/svnversion/svnversion.pdb'),
@@ -73,9 +73,9 @@ Index: build/win32/make_dist.py
  
 Index: subversion/bindings/swig/include/apr.swg
 ===================================================================
---- subversion/bindings/swig/include/apr.swg	(revision 1337070)
+--- subversion/bindings/swig/include/apr.swg	(revision 1646395)
 +++ subversion/bindings/swig/include/apr.swg	(working copy)
-@@ -24,37 +24,37 @@
+@@ -24,13 +24,13 @@
   */
  
  /* -----------------------------------------------------------------------
@@ -92,6 +92,7 @@ Index: subversion/bindings/swig/include/apr.swg
      char temp[256];
      sprintf(temp, "%" APR_INT64_T_FMT, (apr_int64_t) $1);
      ST(argvi) = sv_newmortal();
+@@ -37,7 +37,7 @@
      sv_setpv((SV*)ST(argvi++), temp);
  }
  
@@ -100,6 +101,7 @@ Index: subversion/bindings/swig/include/apr.swg
      char temp[256];
      sprintf(temp, "%" APR_UINT64_T_FMT, (apr_uint64_t) $1);
      ST(argvi) = sv_newmortal();
+@@ -44,17 +44,17 @@
      sv_setpv((SV*)ST(argvi++), temp);
  }
  
@@ -139,7 +141,7 @@ Index: subversion/bindings/swig/include/apr.swg
     apr_time_t
 Index: subversion/bindings/swig/include/svn_types.swg
 ===================================================================
---- subversion/bindings/swig/include/svn_types.swg	(revision 1337070)
+--- subversion/bindings/swig/include/svn_types.swg	(revision 1646395)
 +++ subversion/bindings/swig/include/svn_types.swg	(working copy)
 @@ -250,7 +250,11 @@
    enum svn_wc_merge_outcome_t *
@@ -155,7 +157,7 @@ Index: subversion/bindings/swig/include/svn_types.swg
     Generic macros for callback typemaps
 Index: subversion/include/svn_types.h
 ===================================================================
---- subversion/include/svn_types.h	(revision 1337070)
+--- subversion/include/svn_types.h	(revision 1646395)
 +++ subversion/include/svn_types.h	(working copy)
 @@ -29,6 +29,7 @@
  
@@ -167,7 +169,7 @@ Index: subversion/include/svn_types.h
  #include <apr_errno.h>   /* for apr_status_t */
 Index: subversion/libsvn_subr/cache-membuffer.c
 ===================================================================
---- subversion/libsvn_subr/cache-membuffer.c	(revision 1337070)
+--- subversion/libsvn_subr/cache-membuffer.c	(revision 1646395)
 +++ subversion/libsvn_subr/cache-membuffer.c	(working copy)
 @@ -116,7 +116,7 @@
  /* Don't create cache segments smaller than this value unless the total
@@ -180,7 +182,7 @@ Index: subversion/libsvn_subr/cache-membuffer.c
   * a number of groups at once. That will allow for a very small init flags
 Index: subversion/libsvn_subr/cache.c
 ===================================================================
---- subversion/libsvn_subr/cache.c	(revision 1337070)
+--- subversion/libsvn_subr/cache.c	(revision 1646395)
 +++ subversion/libsvn_subr/cache.c	(working copy)
 @@ -211,15 +211,15 @@
  {
