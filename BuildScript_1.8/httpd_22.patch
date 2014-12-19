@@ -1,6 +1,6 @@
 Index: modules/ssl/mod_ssl.dep
 ===================================================================
---- modules/ssl/mod_ssl.dep	(revision 1620289)
+--- modules/ssl/mod_ssl.dep	(revision 1645870)
 +++ modules/ssl/mod_ssl.dep	(working copy)
 @@ -40,7 +40,6 @@
  	"..\..\srclib\apr\include\apr_thread_rwlock.h"\

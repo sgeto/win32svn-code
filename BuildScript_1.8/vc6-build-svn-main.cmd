@@ -23,7 +23,7 @@ rmdir /s /q %LOG_DIR%
 mkdir %LOG_DIR%
 
 
-goto TEST
+::goto TEST
 
 rem ===== Get Sources =====
 call get-svn-source.cmd
