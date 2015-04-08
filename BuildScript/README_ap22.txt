@@ -1,4 +1,4 @@
-This is Subversion for Win32, version 1.7.19. Read the CHANGES file to
+This is Subversion for Win32, version 1.7.20. Read the CHANGES file to
 see what changed in this release:
 
     http://svn.apache.org/repos/asf/subversion/branches/1.7.x/CHANGES
@@ -10,7 +10,7 @@ These binaries were built with:
     APR-ICONV 1.2.1
     Neon 0.30.1
     Berkeley DB 4.8.30
-    OpenSSL 1.0.1j
+    OpenSSL 1.0.1m
     ZLib 1.2.8
     Apache httpd 2.2.29
 	
@@ -21,7 +21,7 @@ These binaries were built with:
     Ruby 1.8.6
     Cyrus SASL 2.1.23
     serf 1.2.1
-    sqlite 3.8.7.4
+    sqlite 3.8.8.3
     SWIG 1.3.40
 
 The patched libintl is at
