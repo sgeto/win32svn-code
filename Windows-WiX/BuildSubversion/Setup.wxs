@@ -35,9 +35,9 @@
 --><Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<!-- only add new defines at the END of this list, do not change the order -->
 	<?define RTMProductVersion="1.0.0" ?>
-  	<?define ProductVersion="1.7.18" ?> <!-- index 2 in XPath PI - change for upgrade -->
-	<?define RevisionNumber="r1615274" ?> <!-- index 3 in XPath PI - change for upgrade -->
-	<?define ProductCode="{4E074D77-E743-4F5C-B489-774B59F63B2B}" ?> <!-- index 4 in XPath PI - change for upgrade -->
+  	<?define ProductVersion="1.7.20" ?> <!-- index 2 in XPath PI - change for upgrade -->
+	<?define RevisionNumber="r1667556" ?> <!-- index 3 in XPath PI - change for upgrade -->
+	<?define ProductCode="{340E3A6A-9602-41E4-B5B4-12C3B6C79F42}" ?> <!-- index 4 in XPath PI - change for upgrade -->
 	<?define UpgradeCode="{032A49B2-32FB-4AE0-BAB0-6AB953CC94DA}" ?> <!-- leave this value -->
 	<?define PackageCode="*" ?>
 
