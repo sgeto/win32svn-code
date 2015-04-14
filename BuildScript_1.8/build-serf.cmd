@@ -6,6 +6,7 @@ pushd %ROOT%\serf
 IF ERRORLEVEL 1 GOTO DIR_FAIL
 
 echo ----- Build -----
+echo ----- Build ----- >> %LOG_DIR%\build-serf.log
 python C:\Python27\scripts\scons.py ^
     APR=%ROOT%\%HTTPDDIR%\srclib\apr ^
     APU=%ROOT%\%HTTPDDIR%\srclib\apr-util ^
@@ -18,11 +19,22 @@ python C:\Python27\scripts\scons.py ^
 	>> %LOG_DIR%\build-serf.log 2>>&1
 IF ERRORLEVEL 1 GOTO BUILD_FAIL
 
+echo ----- Copy APR for Serf tests -----
+echo ----- Copy APR for Serf tests ----- >> %LOG_DIR%\build-serf.log
+copy /Y %ROOT%\%HTTPDDIR%\srclib\apr\Release\libapr-1.dll test\  >> %LOG_DIR%\build-serf.log 2>>&1
+IF ERRORLEVEL 1 GOTO TEST_FAIL
+copy /Y %ROOT%\%HTTPDDIR%\srclib\apr-util\Release\libaprutil-1.dll test\  >> %LOG_DIR%\build-serf.log 2>>&1
+IF ERRORLEVEL 1 GOTO TEST_FAIL
+copy /Y %ROOT%\%HTTPDDIR%\srclib\apr-iconv\Release\libapriconv-1.dll test\  >> %LOG_DIR%\build-serf.log 2>>&1
+IF ERRORLEVEL 1 GOTO TEST_FAIL
+
 echo ----- TEST -----
+echo ----- TEST ----- >> %LOG_DIR%\build-serf.log
 python C:\Python27\scripts\scons.py check >> %LOG_DIR%\build-serf.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 echo ----- INSTALL -----
+echo ----- INSTALL ----- >> %LOG_DIR%\build-serf.log
 python C:\Python27\scripts\scons.py install >> %LOG_DIR%\build-serf.log 2>>&1
 IF ERRORLEVEL 1 GOTO INSTALL_FAIL
 
