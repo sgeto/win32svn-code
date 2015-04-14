@@ -134,6 +134,9 @@ call create-zip.cmd
 IF ERRORLEVEL 1 GOTO END
 
 
+call set-python-ver.cmd 2.7
+IF ERRORLEVEL 1 GOTO END
+
 :TEST
 
 call configure-httpd.cmd
