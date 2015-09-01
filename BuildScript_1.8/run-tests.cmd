@@ -54,7 +54,8 @@ echo ----- Logging tests to run-tests-http-serf.log ------ >> %LOG_DIR%\run-test
 echo ----- Test http-serf ------ > %LOG_DIR%\run-tests-http-serf.log
 start "HTTPD" "%HTTPDINSTDIR%\bin\httpd.exe" >> %LOG_DIR%\run-tests.log
 IF ERRORLEVEL 1 GOTO TEST_FAIL
-python win-tests.py -c -r -v -u http://localhost:80%HTTPDVER% >> %LOG_DIR%\run-tests-http-serf.log 2>>&1
+python win-tests.py -c -r -v -u http://localhost:80%HTTPDVER% --httpd-version=%HTTPDFULLVER% >> %LOG_DIR%\run-tests-http-serf.log 2>>&1
+::python win-tests.py -c -r -v -t authz_tests.py -u http://localhost:80%HTTPDVER% --httpd-version=%HTTPDFULLVER% >> %LOG_DIR%\run-tests-http-serf.log 2>>&1
 IF ERRORLEVEL 1 GOTO httptest_fail
 goto httpsuccess 
 :httptest_fail
