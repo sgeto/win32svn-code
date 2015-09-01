@@ -139,11 +139,11 @@ IF ERRORLEVEL 1 GOTO END
 call create-zip.cmd
 IF ERRORLEVEL 1 GOTO END
 
+:TEST
 
 call configure-httpd.cmd
 IF ERRORLEVEL 1 GOTO END
 
-:TEST
 
 call run-tests.cmd
 IF ERRORLEVEL 1 GOTO END

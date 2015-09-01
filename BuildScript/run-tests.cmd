@@ -33,13 +33,14 @@ IF ERRORLEVEL 1 GOTO TEST_FAIL
 start "HTTPD" "%HTTPDINSTDIR%\bin\httpd.exe"
 echo ----- Test http-neon ------
 echo ----- Test http-neon ------ >> %LOG_DIR%\run-tests.log
-python win-tests.py -c -r -v -u http://127.0.0.1:80%HTTPDVER% --http-library=neon >> %LOG_DIR%\run-tests.log 2>>&1
+python win-tests.py -c -r -v -u http://127.0.0.1:80%HTTPDVER% --http-library=neon --httpd-version=%HTTPDFULLVER% >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 :SERF
+start "HTTPD" "%HTTPDINSTDIR%\bin\httpd.exe"
 echo ----- Test http-serf ------
 echo ----- Test http-serf ------ >> %LOG_DIR%\run-tests.log
-python win-tests.py -c -r -v -u http://127.0.0.1:80%HTTPDVER% --http-library=serf >> %LOG_DIR%\run-tests.log 2>>&1
+python win-tests.py -c -r -v -u http://127.0.0.1:80%HTTPDVER% --http-library=serf --httpd-version=%HTTPDFULLVER% >> %LOG_DIR%\run-tests.log 2>>&1
 IF ERRORLEVEL 1 GOTO TEST_FAIL
 
 :END
