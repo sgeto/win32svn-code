@@ -25,8 +25,8 @@ SET BOOKDEST=.\out
 
 ::svn co http://svnbook.googlecode.com/svn/branches/1.8/en %SOURCEDIR%
 ::svn co http://svnbook.googlecode.com/svn/branches/1.8/tools .\tools
-svn co http://svnbook.googlecode.com/svn/trunk/en %SOURCEDIR%
-svn co http://svnbook.googlecode.com/svn/trunk/tools .\tools
+svn co https://svn.code.sf.net/p/svnbook/source/trunk/en %SOURCEDIR%
+svn co https://svn.code.sf.net/p/svnbook/source/trunk/tools .\tools
 
 mkdir %WORK%\images
 copy %SOURCEDIR%\book\images\*.* %WORK%\images
