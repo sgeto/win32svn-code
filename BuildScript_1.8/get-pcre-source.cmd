@@ -4,7 +4,7 @@ echo ====== Get pcre Source code ======
 echo ====== Get pcre Source code ====== > %LOG_DIR%\get-pcre-source.log
 IF %HTTPDVER%==22 GOTO SKIP_PCRE
 
-%WGET% -N --directory-prefix=%DLDIR% http://sourceforge.net/projects/pcre/files/pcre/%PCREVER%/pcre-%PCREVER%.zip/download >> %LOG_DIR%\get-pcre-source.log 2>>&1
+%WGET% -N --no-check-certificate --directory-prefix=%DLDIR% http://sourceforge.net/projects/pcre/files/pcre/%PCREVER%/pcre-%PCREVER%.zip/download >> %LOG_DIR%\get-pcre-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO DL_FAIL
 
 echo ====== Extract pcre ======

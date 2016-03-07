@@ -6,7 +6,7 @@ set PATHORG=%PATH%
 PATH=%ROOT%\svn-win32-%VER%\svn-win32-%VER%\bin;%PATH%
 pushd %ROOT%\%DIR%
 
-::goto svn
+::goto httpd
 
 :fsfs
 echo ----- Test fsfs ------
