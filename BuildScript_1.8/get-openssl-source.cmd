@@ -2,7 +2,7 @@
 
 echo ====== Get openssl Source code ======
 echo ====== Get openssl Source code ====== > %LOG_DIR%\get-openssl-source.log
-%WGET% -N --directory-prefix=%DLDIR% http://www.openssl.org/source/openssl-%OPENSSLVER%.tar.gz >> %LOG_DIR%\get-openssl-source.log 2>>&1
+%WGET% -N --no-check-certificate --directory-prefix=%DLDIR% http://www.openssl.org/source/openssl-%OPENSSLVER%.tar.gz >> %LOG_DIR%\get-openssl-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO CO_FAIL
 
 echo ====== Extract openssl ======
