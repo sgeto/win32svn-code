@@ -2,7 +2,7 @@
 
 echo ====== Get swig Source code ======
 echo ====== Get swig Source code ====== > %LOG_DIR%\get-swig-source.log
-%WGET% -N --directory-prefix=%DLDIR% http://downloads.sourceforge.net/project/swig/swigwin/swigwin-%SWIGVER%/swigwin-%SWIGVER%.zip >> %LOG_DIR%\get-swig-source.log 2>>&1
+%WGET% -N --no-check-certificate --directory-prefix=%DLDIR% http://downloads.sourceforge.net/project/swig/swigwin/swigwin-%SWIGVER%/swigwin-%SWIGVER%.zip >> %LOG_DIR%\get-swig-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO CO_FAIL
 
 echo ====== Extract swig ======
