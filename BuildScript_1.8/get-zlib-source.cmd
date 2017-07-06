@@ -2,12 +2,12 @@
 
 echo ====== Get zlib Source code ======
 echo ====== Get zlib Source code ====== > %LOG_DIR%\get-zlib-source.log
-%WGET% -N --directory-prefix=%DLDIR% http://zlib.net/zlib%ZLIBFILEVER%.zip >> %LOG_DIR%\get-zlib-source.log 2>>&1
+%WGET% -N --no-check-certificate https://github.com/madler/zlib/archive/v%ZLIBVER%.zip --output-document=%DLDIR%\zlib-%ZLIBVER%.zip >> %LOG_DIR%\get-zlib-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO CO_FAIL
 
 echo ====== Extract zlib ======
 echo ====== Extract zlib ====== >> %LOG_DIR%\get-zlib-source.log
-%ZZIP% x -y %DLDIR%\zlib%ZLIBFILEVER%.zip -o%ROOT%\%HTTPDDIR%\srclib\ >> %LOG_DIR%\get-zlib-source.log 2>>&1
+%ZZIP% x -y %DLDIR%\zlib-%ZLIBVER%.zip -o%ROOT%\%HTTPDDIR%\srclib\ >> %LOG_DIR%\get-zlib-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
 rmdir /Q /S %ROOT%\%HTTPDDIR%\srclib\zlib >> %LOG_DIR%\get-zlib-source.log 2>>&1
 IF ERRORLEVEL 1 GOTO EXTRACT_FAIL
