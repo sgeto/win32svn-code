@@ -23,7 +23,8 @@ rmdir /s /q %LOG_DIR%
 mkdir %LOG_DIR%
 
 
-::goto TEST
+goto TEST
+::goto SKIP
 
 rem ===== Get Sources =====
 call get-svn-source.cmd
@@ -98,6 +99,8 @@ IF ERRORLEVEL 1 GOTO END
 call build-serf.cmd
 IF ERRORLEVEL 1 GOTO END
 
+:SKIP
+
 call build-svn-main.cmd
 IF ERRORLEVEL 1 GOTO END
 
@@ -112,7 +115,6 @@ IF ERRORLEVEL 1 GOTO END
 
 call remove-zip.cmd
 IF ERRORLEVEL 1 GOTO END
-
 
 call set-python-ver.cmd 2.7
 IF ERRORLEVEL 1 GOTO END
